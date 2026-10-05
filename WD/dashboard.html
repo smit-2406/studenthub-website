@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CHARUSAT StudentHub – Student Dashboard overview with courses, assignments, and notices." />
+  <title>Dashboard | CHARUSAT StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>📢 Mid-Semester Exams scheduled from 15 Oct 2026. <a href="dashboard.html" style="color:#fff;text-decoration:underline;">View Timetable</a></span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="profile.html" class="btn btn-outline btn-sm">👤 Aarav Patel</a>
+          <a href="login.html" class="btn btn-sm btn-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Dashboard</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- App Layout -->
+  <div class="app-container container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="complementary" aria-label="Dashboard sidebar">
+      <p class="sidebar-title">Main Menu</p>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html" class="sidebar-link" aria-current="page">📊 Dashboard</a></li>
+        <li><a href="courses.html" class="sidebar-link">📚 My Courses</a></li>
+        <li><a href="profile.html" class="sidebar-link">👤 My Profile</a></li>
+        <li><a href="feedback.html" class="sidebar-link">💬 Feedback</a></li>
+        <li><a href="settings.html" class="sidebar-link">⚙️ Settings</a></li>
+      </ul>
+      <p class="sidebar-title">Admin</p>
+      <ul class="sidebar-menu">
+        <li><a href="admin.html" class="sidebar-link">🛡️ Admin Portal</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+
+      <!-- Welcome Heading -->
+      <section class="dashboard-welcome" aria-labelledby="welcome-heading">
+        <h1 id="welcome-heading">Good Morning, Aarav! 👋</h1>
+        <p class="text-muted">Here's a quick overview of your academic activity. Stay on top of your courses and upcoming tasks.</p>
+      </section>
+
+      <!-- Stats Row -->
+      <section class="stats-section" aria-label="Academic statistics">
+        <div class="grid grid-4">
+
+          <div class="stat-card" role="region" aria-label="Enrolled Courses">
+            <div class="stat-icon" aria-hidden="true">📚</div>
+            <div class="stat-info">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Enrolled Courses</span>
+            </div>
+          </div>
+
+          <div class="stat-card" role="region" aria-label="CGPA">
+            <div class="stat-icon" aria-hidden="true">🎓</div>
+            <div class="stat-info">
+              <span class="stat-value">8.72</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+          </div>
+
+          <div class="stat-card" role="region" aria-label="Attendance">
+            <div class="stat-icon" aria-hidden="true">📅</div>
+            <div class="stat-info">
+              <span class="stat-value">87%</span>
+              <span class="stat-label">Attendance</span>
+            </div>
+          </div>
+
+          <div class="stat-card" role="region" aria-label="Pending Assignments">
+            <div class="stat-icon" aria-hidden="true">📝</div>
+            <div class="stat-info">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Pending Assignments</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Courses & Assignments Row -->
+      <div class="grid grid-2">
+
+        <!-- My Enrolled Courses -->
+        <section class="card" aria-labelledby="courses-heading">
+          <div class="card-header">
+            <h2 id="courses-heading" class="card-title">📚 My Enrolled Courses</h2>
+            <a href="courses.html" class="btn btn-sm btn-outline">View All</a>
+          </div>
+          <div class="card-body">
+            <ul class="course-progress-list" aria-label="Course progress list">
+
+              <li class="course-progress-item">
+                <div class="course-progress-header">
+                  <span class="course-name">Data Structures &amp; Algorithms</span>
+                  <span class="badge badge-primary">Sem 5</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Data Structures & Algorithms progress 75%">
+                  <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <span class="progress-label">75% Complete</span>
+              </li>
+
+              <li class="course-progress-item">
+                <div class="course-progress-header">
+                  <span class="course-name">Web Development Frameworks</span>
+                  <span class="badge badge-success">Sem 6</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Web Development Frameworks progress 60%">
+                  <div class="progress-fill" style="width: 60%;"></div>
+                </div>
+                <span class="progress-label">60% Complete</span>
+              </li>
+
+              <li class="course-progress-item">
+                <div class="course-progress-header">
+                  <span class="course-name">Database Management Systems</span>
+                  <span class="badge badge-primary">Sem 5</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Database Management Systems progress 90%">
+                  <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+                <span class="progress-label">90% Complete</span>
+              </li>
+
+              <li class="course-progress-item">
+                <div class="course-progress-header">
+                  <span class="course-name">Computer Networks</span>
+                  <span class="badge badge-warning">Sem 6</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Computer Networks progress 45%">
+                  <div class="progress-fill" style="width: 45%;"></div>
+                </div>
+                <span class="progress-label">45% Complete</span>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+
+        <!-- Upcoming Assignments -->
+        <section class="card" aria-labelledby="assignments-heading">
+          <div class="card-header">
+            <h2 id="assignments-heading" class="card-title">📝 Upcoming Assignments</h2>
+            <a href="assignments.html" class="btn btn-sm btn-outline">View All</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="data-table" aria-label="Upcoming assignments table">
+                <thead>
+                  <tr>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Assignment</th>
+                    <th scope="col">Due Date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>WDF</td>
+                    <td>Responsive Portfolio</td>
+                    <td>02 Oct 2026</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>DBMS</td>
+                    <td>ER Diagram – Library</td>
+                    <td>05 Oct 2026</td>
+                    <td><span class="badge badge-danger">Overdue</span></td>
+                  </tr>
+                  <tr>
+                    <td>CN</td>
+                    <td>Subnetting Practice</td>
+                    <td>10 Oct 2026</td>
+                    <td><span class="badge badge-success">Submitted</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /.grid.grid-2 -->
+
+      <!-- Recent Notices -->
+      <section class="notices-section" aria-labelledby="notices-heading">
+        <h2 id="notices-heading" class="section-title">📢 Recent Notices</h2>
+        <div class="grid grid-3">
+
+          <article class="notice-card card" aria-label="Notice: Mid-Semester Exam Schedule">
+            <div class="card-body">
+              <span class="badge badge-danger notice-tag">Exam</span>
+              <h3 class="notice-title">Mid-Semester Exam Schedule Released</h3>
+              <p class="notice-desc">Exams begin 15 Oct 2026. Check your individual timetable on the portal.</p>
+              <p class="notice-date text-muted"><time datetime="2026-09-25">25 Sep 2026</time></p>
+            </div>
+          </article>
+
+          <article class="notice-card card" aria-label="Notice: Annual Tech Fest">
+            <div class="card-body">
+              <span class="badge badge-primary notice-tag">Event</span>
+              <h3 class="notice-title">TechFusion 2026 – Annual Tech Fest</h3>
+              <p class="notice-desc">Register your team for hackathons, paper presentations, and coding contests.</p>
+              <p class="notice-date text-muted"><time datetime="2026-09-22">22 Sep 2026</time></p>
+            </div>
+          </article>
+
+          <article class="notice-card card" aria-label="Notice: Library Hours Extended">
+            <div class="card-body">
+              <span class="badge badge-success notice-tag">General</span>
+              <h3 class="notice-title">Library Hours Extended for Exam Season</h3>
+              <p class="notice-desc">The central library will remain open until 11:00 PM from 1 Oct – 20 Oct 2026.</p>
+              <p class="notice-date text-muted"><time datetime="2026-09-20">20 Sep 2026</time></p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main><!-- /#main-content -->
+
+  </div><!-- /.app-container -->
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

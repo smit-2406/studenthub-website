@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2026-10-01T10:15:30+05:30",
+    "type": "Contact Inquiry",
+    "name": "Aarav Sharma",
+    "email": "aarav.sharma@charusat.edu.in",
+    "info_1": "Subject: Course Inquiry",
+    "info_2": "Seeking syllabus and credit transfer details for semester 3 Web Development Frameworks elective.",
+    "format": "JSON"
+  },
+  {
+    "timestamp": "2026-10-02T14:22:10+05:30",
+    "type": "Student Registration",
+    "name": "Diya Patel",
+    "email": "diya.patel@charusat.ac.in",
+    "info_1": "B.Tech Computer Engineering (2nd Year)",
+    "info_2": "Mobile: 9825012345 | Gender: Female",
+    "format": "JSON"
+  },
+  {
+    "timestamp": "2026-10-04T09:05:40+05:30",
+    "type": "Student Registration",
+    "name": "Rohan Mehta",
+    "email": "rohan.mehta@charusat.ac.in",
+    "info_1": "B.Tech IT Engineering (3rd Year)",
+    "info_2": "Mobile: 9408123456 | Gender: Male",
+    "format": "BOTH"
+  }
+]

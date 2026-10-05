@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CHARUSAT StudentHub – Share your feedback to help us improve the campus experience." />
+  <title>Feedback – CHARUSAT StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>📢 System Maintenance scheduled on Sunday 2AM–4AM IST. Services may be unavailable.</span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="profile.html" class="btn btn-outline btn-sm">👤 Admin</a>
+          <a href="login.html" class="btn btn-sm btn-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Feedback</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <div class="container">
+
+      <!-- Page Header -->
+      <div class="page-header text-center">
+        <h1 class="page-title">Student Feedback</h1>
+        <p class="page-subtitle">Share your experience to help us improve</p>
+      </div>
+
+      <!-- Feedback Form Card -->
+      <div class="form-card" style="max-width: 720px; margin: 0 auto;">
+        <form action="#" method="post" novalidate aria-label="Student feedback form">
+
+          <!-- Student Name -->
+          <div class="form-group">
+            <label class="form-label" for="student-name">Student Name <span aria-hidden="true" class="required-mark">*</span></label>
+            <input
+              type="text"
+              id="student-name"
+              name="student_name"
+              class="form-control"
+              placeholder="Enter your full name"
+              required
+              autocomplete="name"
+              aria-required="true"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span aria-hidden="true" class="required-mark">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="you@charusat.ac.in"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
+          </div>
+
+          <!-- Feedback Category -->
+          <div class="form-group">
+            <label class="form-label" for="category">Feedback Category</label>
+            <select id="category" name="category" class="form-control">
+              <option value="" disabled selected>Select a category…</option>
+              <option value="academic">Academic Quality</option>
+              <option value="portal">Portal Experience</option>
+              <option value="faculty">Faculty Support</option>
+              <option value="hostel">Hostel &amp; Facilities</option>
+              <option value="placement">Placement Services</option>
+              <option value="general">General</option>
+            </select>
+          </div>
+
+          <!-- Rating -->
+          <fieldset class="form-group">
+            <legend class="form-label">Rating</legend>
+            <div class="radio-group" role="group" aria-label="Select a rating from 1 to 5">
+              <label class="radio-label">
+                <input type="radio" name="rating" value="1" />
+                <span>1 – Poor</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="rating" value="2" />
+                <span>2 – Below Average</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="rating" value="3" />
+                <span>3 – Average</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="rating" value="4" />
+                <span>4 – Good</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="rating" value="5" />
+                <span>5 – Excellent</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Detailed Feedback -->
+          <div class="form-group">
+            <label class="form-label" for="feedback-text">Detailed Feedback <span aria-hidden="true" class="required-mark">*</span></label>
+            <textarea
+              id="feedback-text"
+              name="feedback_text"
+              class="form-control"
+              rows="5"
+              placeholder="Tell us about your experience in detail…"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <!-- Recommend CHARUSAT -->
+          <fieldset class="form-group">
+            <legend class="form-label">Would you recommend CHARUSAT?</legend>
+            <div class="radio-group radio-group--inline" role="group" aria-label="Recommendation choice">
+              <label class="radio-label">
+                <input type="radio" name="recommend" value="yes" />
+                <span>Yes</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="recommend" value="no" />
+                <span>No</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Submit -->
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
+          </div>
+
+        </form>
+      </div><!-- /.form-card -->
+
+      <!-- Recent Feedback Section -->
+      <section class="section-alt mt-5" aria-labelledby="recent-feedback-heading">
+        <div class="section-header text-center">
+          <h2 id="recent-feedback-heading">Recent Feedback</h2>
+          <p class="section-subtitle">What fellow students are saying</p>
+        </div>
+        <div class="grid-3">
+
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card card" aria-label="Feedback from Aarav Patel">
+            <div class="card-body">
+              <div class="testimonial-meta">
+                <span class="testimonial-author">Aarav Patel</span>
+                <span class="badge badge-info">Portal Experience</span>
+              </div>
+              <div class="testimonial-rating" aria-label="Rating: 5 out of 5">
+                <span aria-hidden="true">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">5 – Excellent</span>
+              </div>
+              <blockquote class="testimonial-quote">
+                <p>"The StudentHub portal has completely transformed how I manage my academics. The interface is clean, fast, and easy to navigate!"</p>
+              </blockquote>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card card" aria-label="Feedback from Diya Sharma">
+            <div class="card-body">
+              <div class="testimonial-meta">
+                <span class="testimonial-author">Diya Sharma</span>
+                <span class="badge badge-info">Academic Quality</span>
+              </div>
+              <div class="testimonial-rating" aria-label="Rating: 4 out of 5">
+                <span aria-hidden="true">⭐⭐⭐⭐☆</span>
+                <span class="rating-text">4 – Good</span>
+              </div>
+              <blockquote class="testimonial-quote">
+                <p>"Course content and faculty support at CHARUSAT are excellent. Would love to see more elective options in the IT department."</p>
+              </blockquote>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card card" aria-label="Feedback from Arjun Nair">
+            <div class="card-body">
+              <div class="testimonial-meta">
+                <span class="testimonial-author">Arjun Nair</span>
+                <span class="badge badge-info">Placement Services</span>
+              </div>
+              <div class="testimonial-rating" aria-label="Rating: 5 out of 5">
+                <span aria-hidden="true">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">5 – Excellent</span>
+              </div>
+              <blockquote class="testimonial-quote">
+                <p>"The placement cell's workshops and mock interview sessions gave me the edge I needed. Secured a great offer from a top MNC!"</p>
+              </blockquote>
+            </div>
+          </article>
+
+        </div><!-- /.grid-3 -->
+      </section>
+
+    </div><!-- /.container -->
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

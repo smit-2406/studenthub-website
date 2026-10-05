@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to your CHARUSAT StudentHub account and access your dashboard, courses, and progress." />
+  <title>Login &mdash; CHARUSAT StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>🎓 Semester 3 Registration is now open! <a href="register.html" style="color:#fff;text-decoration:underline;">Register Now</a></span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="login.html" class="btn btn-outline btn-sm" aria-current="page">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Login</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-content">
+    <div class="container">
+
+      <!-- Page Header -->
+      <section class="page-header" aria-labelledby="page-title">
+        <h1 id="page-title" class="page-title">User Login</h1>
+        <p class="page-subtitle">Access your StudentHub dashboard</p>
+      </section>
+
+      <!-- Login Form Card -->
+      <div class="form-card-wrapper">
+        <div class="form-card">
+
+          <form action="#" method="post" novalidate aria-label="User login form">
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="login-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="login-email"
+                name="login-email"
+                class="form-control"
+                placeholder="you@charusat.ac.in"
+                autocomplete="email"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+              <label for="login-password" class="form-label">Password <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="password"
+                id="login-password"
+                name="login-password"
+                class="form-control"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <!-- Remember Me + Forgot Password row -->
+            <div class="form-group form-inline-row">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  id="remember-me"
+                  name="remember-me"
+                  class="form-check-input"
+                />
+                <label for="remember-me" class="form-check-label">Remember me</label>
+              </div>
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">
+                Login to Dashboard
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Register link -->
+          <p class="form-card-footer-text">
+            Don't have an account?
+            <a href="register.html" class="form-link">Register here</a>
+          </p>
+
+        </div><!-- /.form-card -->
+      </div><!-- /.form-card-wrapper -->
+
+    </div><!-- /.container -->
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University &mdash; streamlining communication, course management, and student progress tracking.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203 Web Development Frameworks</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

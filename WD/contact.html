@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact the CHARUSAT StudentHub team — Get support for technical issues, academic queries, and general inquiries." />
+  <title>Contact &amp; Support | StudentHub — CHARUSAT</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>🎓 Semester 3 Registration is now open! <a href="register.html" style="color:#fff;text-decoration:underline;">Register Now</a></span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Contact &amp; Support</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-heading">
+      <div class="container">
+        <h1 id="page-heading">Contact &amp; Support</h1>
+        <p class="page-subtitle">Get in touch with the StudentHub team</p>
+      </div>
+    </section>
+
+    <!-- Contact Form + Info Section -->
+    <section class="section" aria-labelledby="contact-section-heading">
+      <div class="container">
+        <h2 id="contact-section-heading" class="sr-only">Contact Us</h2>
+        <div class="grid grid-2">
+
+          <!-- Contact Form -->
+          <div class="form-card" role="region" aria-labelledby="form-heading">
+            <h2 id="form-heading">Send Us a Message</h2>
+            <p class="form-intro">Fill out the form below and our team will get back to you within one business day.</p>
+            <form action="#" method="post" novalidate>
+
+              <div class="form-group">
+                <label for="contact-name">Full Name <span aria-hidden="true" class="required-indicator">*</span></label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="e.g. Aryan Patel"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address <span aria-hidden="true" class="required-indicator">*</span></label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="e.g. aryan@charusat.edu.in"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject <span aria-hidden="true" class="required-indicator">*</span></label>
+                <select id="contact-subject" name="subject" class="form-input form-select" required aria-required="true">
+                  <option value="" disabled selected>Select a subject…</option>
+                  <option value="technical">Technical Issue</option>
+                  <option value="account">Account Help</option>
+                  <option value="course">Course Inquiry</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span aria-hidden="true" class="required-indicator">*</span></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Describe your issue or question in detail…"
+                  rows="6"
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+
+            </form>
+          </div><!-- /.form-card -->
+
+          <!-- Contact Info Card -->
+          <div class="contact-info-card card" role="region" aria-labelledby="contact-info-heading">
+            <div class="card-body">
+              <h2 id="contact-info-heading">Contact Information</h2>
+
+              <address class="contact-address">
+                <div class="contact-info-item">
+                  <span class="contact-icon" aria-hidden="true">📍</span>
+                  <div>
+                    <strong>Address</strong>
+                    <p>CHARUSAT University<br />Education Campus, Changa – 388421<br />Anand, Gujarat, India</p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <span class="contact-icon" aria-hidden="true">✉️</span>
+                  <div>
+                    <strong>Email</strong>
+                    <p><a href="mailto:studenthub@charusat.edu.in">studenthub@charusat.edu.in</a></p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <span class="contact-icon" aria-hidden="true">📞</span>
+                  <div>
+                    <strong>Phone</strong>
+                    <p><a href="tel:+912697265000">+91-2697-265000</a></p>
+                  </div>
+                </div>
+                <div class="contact-info-item">
+                  <span class="contact-icon" aria-hidden="true">🕐</span>
+                  <div>
+                    <strong>Office Hours</strong>
+                    <p>Monday – Friday, 9:00 AM – 5:00 PM</p>
+                  </div>
+                </div>
+              </address>
+
+              <hr class="contact-divider" aria-hidden="true" />
+
+              <h3 class="support-types-heading">Support Channels</h3>
+              <ul class="support-type-list" aria-label="Support channels">
+                <li class="support-type-item">
+                  <span class="support-type-icon" aria-hidden="true">🛠️</span>
+                  <div>
+                    <strong>Technical Support</strong>
+                    <p>Portal login issues, system errors, and platform bugs.</p>
+                  </div>
+                </li>
+                <li class="support-type-item">
+                  <span class="support-type-icon" aria-hidden="true">📚</span>
+                  <div>
+                    <strong>Academic Queries</strong>
+                    <p>Course enrollment, grades, transcripts, and timetable queries.</p>
+                  </div>
+                </li>
+                <li class="support-type-item">
+                  <span class="support-type-icon" aria-hidden="true">💬</span>
+                  <div>
+                    <strong>General Inquiries</strong>
+                    <p>Campus events, announcements, and administrative assistance.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.contact-info-card -->
+
+        </div><!-- /.grid -->
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-alt" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Quick answers to the most common support questions</p>
+
+        <div class="faq-list" role="list">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item card" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+              id="faq-btn-1"
+            >
+              <span>I forgot my StudentHub password. How do I reset it?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq-answer-1"
+              role="region"
+              aria-labelledby="faq-btn-1"
+              hidden
+            >
+              <p>On the <a href="login.html">Login page</a>, click the <strong>"Forgot Password?"</strong> link below the sign-in form. Enter your registered CHARUSAT email address and you will receive a password reset link within a few minutes. If the email does not arrive, please check your spam folder or contact Technical Support using the form above.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item card" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+              id="faq-btn-2"
+            >
+              <span>How do I enroll in a course through the portal?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq-answer-2"
+              role="region"
+              aria-labelledby="faq-btn-2"
+              hidden
+            >
+              <p>Log in to your StudentHub account and navigate to the <a href="courses.html">Course Catalog</a>. Find your desired course and click the <strong>"Enroll"</strong> button. You will be directed to the registration confirmation page. Note that enrollment is only available during the official registration window for each semester. Contact Academic Queries support if you experience eligibility issues.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item card" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+              id="faq-btn-3"
+            >
+              <span>The portal is not loading correctly on my browser. What should I do?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq-answer-3"
+              role="region"
+              aria-labelledby="faq-btn-3"
+              hidden
+            >
+              <p>First, try performing a hard refresh (<kbd>Ctrl + Shift + R</kbd> on Windows or <kbd>Cmd + Shift + R</kbd> on Mac) to clear your browser cache. Ensure you are using an up-to-date version of Chrome, Firefox, Edge, or Safari. If the issue persists, try opening the portal in an incognito/private window. For ongoing problems, please submit a <strong>Technical Issue</strong> ticket via the contact form above and include your browser version and a description of the error.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item card" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-4"
+              id="faq-btn-4"
+            >
+              <span>How long does it take to receive a response to my support request?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq-answer-4"
+              role="region"
+              aria-labelledby="faq-btn-4"
+              hidden
+            >
+              <p>Our support team aims to respond to all inquiries within <strong>one business day</strong> during office hours (Monday – Friday, 9 AM – 5 PM). Technical issues marked as urgent are typically addressed within a few hours. During peak periods such as semester registration or exam season, response times may be slightly longer. You will receive a reply to your registered email address.</p>
+            </div>
+          </div>
+
+        </div><!-- /.faq-list -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University — streamlining communication, course management, and student progress tracking.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203 Web Development Frameworks</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CHARUSAT StudentHub – Student Profile for Aarav Patel, CE220101." />
+  <title>My Profile | CHARUSAT StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>📢 Mid-Semester Exams scheduled from 15 Oct 2026. <a href="dashboard.html" style="color:#fff;text-decoration:underline;">View Timetable</a></span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="profile.html" class="btn btn-outline btn-sm">👤 Aarav Patel</a>
+          <a href="login.html" class="btn btn-sm btn-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Profile</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- App Layout -->
+  <div class="app-container container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="complementary" aria-label="Dashboard sidebar">
+      <p class="sidebar-title">Main Menu</p>
+      <ul class="sidebar-menu">
+        <li><a href="dashboard.html" class="sidebar-link">📊 Dashboard</a></li>
+        <li><a href="courses.html" class="sidebar-link">📚 My Courses</a></li>
+        <li><a href="profile.html" class="sidebar-link" aria-current="page">👤 My Profile</a></li>
+        <li><a href="feedback.html" class="sidebar-link">💬 Feedback</a></li>
+        <li><a href="settings.html" class="sidebar-link">⚙️ Settings</a></li>
+      </ul>
+      <p class="sidebar-title">Admin</p>
+      <ul class="sidebar-menu">
+        <li><a href="admin.html" class="sidebar-link">🛡️ Admin Portal</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+
+      <!-- Profile Banner Widget -->
+      <section class="profile-widget card" aria-labelledby="profile-name-heading">
+
+        <div class="profile-banner" aria-hidden="true"></div>
+
+        <div class="profile-info-bar">
+          <div class="profile-avatar" aria-label="Avatar initials for Aarav Patel">AP</div>
+          <div class="profile-meta">
+            <h1 id="profile-name-heading" class="profile-name">Aarav Patel</h1>
+            <p class="profile-id">CE220101</p>
+            <div class="profile-tags">
+              <span class="badge badge-primary">Computer Engineering</span>
+              <span class="badge badge-success">Semester 6</span>
+            </div>
+          </div>
+          <div class="profile-edit-action">
+            <button class="btn btn-outline btn-sm" id="edit-profile-btn" aria-label="Edit your profile">✏️ Edit Profile</button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Tabs Component -->
+      <section class="tabs-section card" aria-label="Profile information tabs">
+        <div class="tabs-container">
+
+          <!-- Tab Navigation -->
+          <ul class="tabs-nav" role="tablist" aria-label="Profile sections">
+            <li role="presentation">
+              <button
+                class="tab-btn active"
+                id="tab-personal"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-personal"
+              >👤 Personal Info</button>
+            </li>
+            <li role="presentation">
+              <button
+                class="tab-btn"
+                id="tab-academic"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-academic"
+                tabindex="-1"
+              >🎓 Academic Info</button>
+            </li>
+            <li role="presentation">
+              <button
+                class="tab-btn"
+                id="tab-skills"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-skills"
+                tabindex="-1"
+              >⭐ Skills &amp; Achievements</button>
+            </li>
+          </ul>
+
+          <!-- Tab Panels -->
+
+          <!-- Personal Info Panel -->
+          <div
+            class="tab-panel active"
+            id="panel-personal"
+            role="tabpanel"
+            aria-labelledby="tab-personal"
+          >
+            <div class="grid grid-2 info-grid">
+
+              <div class="info-row">
+                <span class="info-label">Full Name</span>
+                <span class="info-value">Aarav Patel</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Email Address</span>
+                <span class="info-value">
+                  <a href="mailto:aarav.patel@charusat.edu.in">aarav.patel@charusat.edu.in</a>
+                </span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Mobile</span>
+                <span class="info-value">+91 98765 43210</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">City</span>
+                <span class="info-value">Anand</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">State</span>
+                <span class="info-value">Gujarat</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Country</span>
+                <span class="info-value">India</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Date of Birth</span>
+                <span class="info-value"><time datetime="2004-03-12">12 March 2004</time></span>
+              </div>
+
+            </div>
+          </div><!-- /#panel-personal -->
+
+          <!-- Academic Info Panel -->
+          <div
+            class="tab-panel"
+            id="panel-academic"
+            role="tabpanel"
+            aria-labelledby="tab-academic"
+            hidden
+          >
+            <div class="grid grid-2 info-grid">
+
+              <div class="info-row">
+                <span class="info-label">CGPA</span>
+                <span class="info-value">8.72 / 10.0</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Department</span>
+                <span class="info-value">Computer Engineering</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Current Semester</span>
+                <span class="info-value">Semester 6</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Enrollment No.</span>
+                <span class="info-value">CE220101</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Courses Enrolled</span>
+                <span class="info-value">6</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Overall Attendance</span>
+                <span class="info-value">87%</span>
+              </div>
+
+            </div>
+          </div><!-- /#panel-academic -->
+
+          <!-- Skills & Achievements Panel -->
+          <div
+            class="tab-panel"
+            id="panel-skills"
+            role="tabpanel"
+            aria-labelledby="tab-skills"
+            hidden
+          >
+            <!-- Skill Badges -->
+            <div class="skills-block">
+              <h3 class="subsection-title">🛠️ Technical Skills</h3>
+              <div class="skill-badges" aria-label="List of technical skills">
+                <span class="badge badge-primary skill-badge">Java</span>
+                <span class="badge badge-success skill-badge">React.js</span>
+                <span class="badge badge-warning skill-badge">MySQL</span>
+                <span class="badge badge-secondary skill-badge">Git</span>
+                <span class="badge badge-primary skill-badge">HTML &amp; CSS</span>
+                <span class="badge badge-success skill-badge">JavaScript</span>
+                <span class="badge badge-warning skill-badge">Python</span>
+              </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievements-block">
+              <h3 class="subsection-title">🏆 Achievements</h3>
+              <ul class="achievements-list" aria-label="List of achievements">
+                <li class="achievement-item">
+                  <span class="achievement-icon" aria-hidden="true">🥇</span>
+                  <div>
+                    <strong>1st Place – TechFusion 2025 Hackathon</strong>
+                    <p class="text-muted">Built a real-time campus bus tracking app using React.js and Node.js.</p>
+                  </div>
+                </li>
+                <li class="achievement-item">
+                  <span class="achievement-icon" aria-hidden="true">📜</span>
+                  <div>
+                    <strong>NPTEL Certification – Python for Data Science</strong>
+                    <p class="text-muted">Completed with 85% score. Issued by IIT Madras via NPTEL, 2025.</p>
+                  </div>
+                </li>
+                <li class="achievement-item">
+                  <span class="achievement-icon" aria-hidden="true">🎖️</span>
+                  <div>
+                    <strong>Best Student Award – Sem 5</strong>
+                    <p class="text-muted">Awarded by the Department of Computer Engineering for academic excellence.</p>
+                  </div>
+                </li>
+                <li class="achievement-item">
+                  <span class="achievement-icon" aria-hidden="true">🌐</span>
+                  <div>
+                    <strong>Open Source Contributor – GitHub</strong>
+                    <p class="text-muted">Contributed to 3 open-source repositories with merged pull requests.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div><!-- /#panel-skills -->
+
+        </div><!-- /.tabs-container -->
+      </section><!-- /.tabs-section -->
+
+    </main><!-- /#main-content -->
+
+  </div><!-- /.app-container -->
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

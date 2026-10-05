@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "title": "Annual Tech Fest - TechNova 2025",
+    "date": "2025-09-20",
+    "category": "Technical",
+    "location": "CSPIT Auditorium, CHARUSAT Campus",
+    "description": "A grand technology festival featuring coding competitions, hackathons, robotics challenges, and guest lectures from industry leaders.",
+    "organizer": "Department of Computer Engineering",
+    "time": "09:00 AM - 06:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 2,
+    "title": "Fresher's Welcome Ceremony",
+    "date": "2025-08-10",
+    "category": "Cultural",
+    "location": "Main Auditorium, CHARUSAT",
+    "description": "Welcome event for newly admitted students featuring cultural performances, introductions, and fun activities to help freshers feel at home.",
+    "organizer": "Student Council",
+    "time": "04:00 PM - 08:00 PM",
+    "registrationOpen": false
+  },
+  {
+    "id": 3,
+    "title": "Web Development Bootcamp",
+    "date": "2025-10-05",
+    "category": "Workshop",
+    "location": "Computer Lab 3, CSPIT Building",
+    "description": "A hands-on 2-day bootcamp covering HTML, CSS, JavaScript, and React.js fundamentals with project-based learning.",
+    "organizer": "Google Developer Student Club - CHARUSAT",
+    "time": "10:00 AM - 04:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 4,
+    "title": "Inter-College Cricket Tournament",
+    "date": "2025-11-15",
+    "category": "Sports",
+    "location": "CHARUSAT Sports Ground",
+    "description": "Annual inter-college cricket tournament with teams from over 10 colleges across Gujarat competing for the championship trophy.",
+    "organizer": "Sports Committee, CHARUSAT",
+    "time": "08:00 AM - 05:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 5,
+    "title": "National Conference on AI & Machine Learning",
+    "date": "2025-12-12",
+    "category": "Academic",
+    "location": "Conference Hall, CSPIT",
+    "description": "A two-day national conference featuring paper presentations, keynote speeches, and panel discussions on the latest trends in AI and ML.",
+    "organizer": "Department of IT Engineering",
+    "time": "09:30 AM - 05:30 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 6,
+    "title": "Rangoli & Mehendi Competition",
+    "date": "2025-10-22",
+    "category": "Cultural",
+    "location": "Open Ground, CHARUSAT Campus",
+    "description": "Celebrate the festive spirit with creative rangoli and mehendi competitions open to all students. Exciting prizes for winners.",
+    "organizer": "Cultural Committee",
+    "time": "02:00 PM - 05:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 7,
+    "title": "Python for Data Science Workshop",
+    "date": "2026-01-18",
+    "category": "Workshop",
+    "location": "Seminar Hall 2, CSPIT",
+    "description": "Learn Python programming for data analysis and visualization using libraries like Pandas, NumPy, and Matplotlib.",
+    "organizer": "ACM Student Chapter - CHARUSAT",
+    "time": "10:00 AM - 01:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 8,
+    "title": "Annual Sports Day - Khel Mahakumbh",
+    "date": "2026-02-08",
+    "category": "Sports",
+    "location": "CHARUSAT Stadium",
+    "description": "University-wide sports day with events including athletics, volleyball, badminton, table tennis, and chess tournaments.",
+    "organizer": "Department of Physical Education",
+    "time": "07:00 AM - 06:00 PM",
+    "registrationOpen": false
+  },
+  {
+    "id": 9,
+    "title": "Campus Placement Drive - TCS",
+    "date": "2026-01-25",
+    "category": "Academic",
+    "location": "Placement Cell, CHARUSAT",
+    "description": "On-campus recruitment drive by TCS for final year B.Tech students. Includes aptitude test, technical interview, and HR round.",
+    "organizer": "Training & Placement Cell",
+    "time": "09:00 AM - 05:00 PM",
+    "registrationOpen": false
+  },
+  {
+    "id": 10,
+    "title": "IoT & Embedded Systems Hackathon",
+    "date": "2026-03-14",
+    "category": "Technical",
+    "location": "Innovation Lab, CSPIT",
+    "description": "24-hour hackathon challenging students to build IoT-based solutions for real-world problems using Arduino and Raspberry Pi.",
+    "organizer": "IEEE Student Branch - CHARUSAT",
+    "time": "10:00 AM (24 Hours)",
+    "registrationOpen": true
+  },
+  {
+    "id": 11,
+    "title": "Republic Day Celebration",
+    "date": "2026-01-26",
+    "category": "Cultural",
+    "location": "Main Campus Ground, CHARUSAT",
+    "description": "Flag hoisting ceremony followed by patriotic performances, speeches, and a march past by NCC cadets.",
+    "organizer": "CHARUSAT Administration",
+    "time": "08:00 AM - 11:00 AM",
+    "registrationOpen": false
+  },
+  {
+    "id": 12,
+    "title": "Cloud Computing with AWS Workshop",
+    "date": "2026-02-22",
+    "category": "Workshop",
+    "location": "Computer Lab 1, CSPIT Building",
+    "description": "Introduction to cloud computing concepts with hands-on experience deploying applications on AWS EC2, S3, and Lambda services.",
+    "organizer": "AWS Cloud Club - CHARUSAT",
+    "time": "10:00 AM - 04:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 13,
+    "title": "Research Paper Writing Seminar",
+    "date": "2026-03-05",
+    "category": "Academic",
+    "location": "Seminar Hall 1, CSPIT",
+    "description": "Expert-led seminar on how to write, format, and publish research papers in reputed journals and conferences.",
+    "organizer": "Research & Development Cell",
+    "time": "11:00 AM - 02:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 14,
+    "title": "Badminton Championship 2026",
+    "date": "2026-04-10",
+    "category": "Sports",
+    "location": "Indoor Sports Complex, CHARUSAT",
+    "description": "Inter-department badminton championship with singles and doubles categories for both men and women.",
+    "organizer": "Sports Committee, CHARUSAT",
+    "time": "08:00 AM - 04:00 PM",
+    "registrationOpen": true
+  },
+  {
+    "id": 15,
+    "title": "Cybersecurity Awareness Workshop",
+    "date": "2026-04-28",
+    "category": "Workshop",
+    "location": "Smart Classroom, DEPSTAR Building",
+    "description": "Workshop covering ethical hacking basics, network security, password management, and safe online practices for students.",
+    "organizer": "Cybersecurity Club - CHARUSAT",
+    "time": "10:00 AM - 03:00 PM",
+    "registrationOpen": true
+  }
+]

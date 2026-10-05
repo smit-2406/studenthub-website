@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Practical 6 - Data Explorer: Fetch API, Search, Filter and Pagination - CHARUSAT ITUE203 StudentHub" />
+  <title>Data Explorer - Practical 6 | StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/practical6.css" />
+  <script>
+    // Theme Initialization (Run early to prevent flashing)
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Skip to main content (Accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>📡 Practical 6: Live data loaded from JSON files using the Fetch API — Search, Filter &amp; Paginate!</span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link" aria-current="page">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb" class="breadcrumb-wrapper">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Data Explorer</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="p6-hero" aria-labelledby="p6-hero-heading">
+    <div class="container">
+      <div class="p6-hero-content">
+        <span class="badge badge-primary">Practical 6</span>
+        <h1 id="p6-hero-heading">📡 Campus Data Explorer</h1>
+        <p class="p6-subtitle">
+          Explore Events, Students, and FAQs dynamically loaded from JSON files using the
+          <strong>Fetch API</strong>. Features include live search, category filtering,
+          sortable results, pagination, and localStorage caching.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <main id="main-content" class="p6-main-section" role="main">
+    <div class="container">
+
+      <!-- Dataset Tabs -->
+      <div class="p6-tabs" role="tablist" aria-label="Dataset tabs">
+        <button class="p6-tab active" data-tab="events" role="tab" aria-selected="true" aria-controls="data-container">
+          📅 Campus Events
+        </button>
+        <button class="p6-tab" data-tab="students" role="tab" aria-selected="false" aria-controls="data-container">
+          🎓 Students Directory
+        </button>
+        <button class="p6-tab" data-tab="faqs" role="tab" aria-selected="false" aria-controls="data-container">
+          ❓ FAQs
+        </button>
+      </div>
+
+      <!-- Dependent Dropdowns (Intermediate Extension) — Only visible for Students tab -->
+      <div class="p6-dependent-dropdowns" id="dependent-dropdowns" hidden aria-hidden="true">
+        <fieldset class="p6-fieldset">
+          <legend>📍 Filter Students by Location</legend>
+          <div class="p6-dropdown-row">
+            <div class="p6-dropdown-col">
+              <label for="country-select">Country</label>
+              <select class="p6-select" id="country-select" aria-label="Select country">
+                <option value="all">All Countries</option>
+                <option value="India">India</option>
+              </select>
+            </div>
+            <div class="p6-dropdown-col">
+              <label for="state-select">State</label>
+              <select class="p6-select" id="state-select" disabled aria-label="Select state">
+                <option value="all">-- Select Country First --</option>
+              </select>
+            </div>
+            <div class="p6-dropdown-col">
+              <label for="city-select">City</label>
+              <select class="p6-select" id="city-select" disabled aria-label="Select city">
+                <option value="all">-- Select State First --</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Controls Bar: Search, Filter, Sort -->
+      <div class="p6-controls" role="search">
+        <div class="p6-search-wrap">
+          <span class="p6-search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="search-input"
+            class="p6-search"
+            placeholder="Search events by title, description, location..."
+            aria-label="Search data"
+            autocomplete="off"
+          />
+        </div>
+        <div class="p6-filter-group">
+          <select class="p6-select" id="filter-select" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="Academic">Academic</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+            <option value="Technical">Technical</option>
+            <option value="Workshop">Workshop</option>
+          </select>
+          <select class="p6-select" id="sort-select" aria-label="Sort results">
+            <option value="default">Sort By</option>
+            <option value="title">Title</option>
+            <option value="date">Date</option>
+            <option value="category">Category</option>
+          </select>
+          <button class="btn btn-outline btn-sm p6-sort-btn" id="sort-order-btn" title="Toggle sort order" aria-label="Toggle sort ascending or descending">
+            ↑ ASC
+          </button>
+        </div>
+      </div>
+
+      <!-- localStorage Cache Controls (Advanced Extension) -->
+      <div class="p6-results-bar">
+        <span class="p6-results-count" id="results-count">Loading data...</span>
+        <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;">
+          <span id="cache-status" style="font-size:0.8rem;color:var(--text-muted);"></span>
+          <button class="btn btn-outline btn-sm" id="btn-load-cache" title="Load from cache">📦 Load Cache</button>
+          <button class="btn btn-outline btn-sm" id="btn-clear-cache" title="Clear localStorage cache">🗑️ Clear Cache</button>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="loading-spinner" hidden aria-live="polite" aria-label="Loading data" role="status">
+        <div class="p6-spinner">
+          <div class="p6-spinner-icon" aria-hidden="true"></div>
+          <span>Fetching data from JSON files...</span>
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error-message" hidden role="alert" aria-live="assertive" class="p6-error"></div>
+
+      <!-- Data Container (Cards / Table rendered here by JS) -->
+      <div id="data-container" role="region" aria-label="Data results" aria-live="polite"></div>
+
+      <!-- Pagination Controls -->
+      <nav id="pagination-controls" aria-label="Pagination" hidden>
+        <div class="p6-pagination">
+          <button class="btn btn-outline btn-sm" id="btn-first" aria-label="First page">&laquo; First</button>
+          <button class="btn btn-outline btn-sm" id="btn-prev" aria-label="Previous page">&lsaquo; Prev</button>
+          <div class="p6-page-numbers" id="page-numbers" role="list" aria-label="Page numbers"></div>
+          <button class="btn btn-outline btn-sm" id="btn-next" aria-label="Next page">Next &rsaquo;</button>
+          <button class="btn btn-outline btn-sm" id="btn-last" aria-label="Last page">Last &raquo;</button>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University — streamlining communication, course management, and student progress tracking.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Practical 6</h4>
+          <ul>
+            <li><a href="practical6.html">Data Explorer</a></li>
+            <li><a href="data/events.json" target="_blank" rel="noopener">Events JSON</a></li>
+            <li><a href="data/students.json" target="_blank" rel="noopener">Students JSON</a></li>
+            <li><a href="data/faqs.json" target="_blank" rel="noopener">FAQs JSON</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203 Web Development Frameworks</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/practical6.js"></script>
+</body>
+</html>

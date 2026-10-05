@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-09-16T10:00:00.000Z" agent="StudentHub System" version="21.0.0" type="device">
+  
+  <!-- Tab 1: Comprehensive Official Sitemap -->
+  <diagram id="sitemap" name="Practical 1 - Official Sitemap">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Header Title Banner -->
+        <mxCell id="title_banner" value="STUDENTHUB PORTAL SITEMAP ARCHITECTURE&#xa;CHARUSAT ITUE203 - Semester 3 Web Development Frameworks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;fontColor=#ffffff;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Color Legend Box -->
+        <mxCell id="legend_box" value="&lt;b&gt;ROLE &amp; PAGE ACCESS LEGEND&lt;/b&gt;&#xa;🔵 Public Access Pages (Open to All Visitors)&#xa;🟢 Student Portal Modules (Requires Login)&#xa;🟡 Account Management (Personal Options)&#xa;🔴 Administrator Portal (Restricted Admin Access)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;align=left;spacingLeft=12;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="95" width="310" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- Root Node: Home Page -->
+        <mxCell id="node_home" value="ROOT: StudentHub Home&#xa;(index.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4f46e5;fontColor=#ffffff;strokeColor=#4338ca;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="500" y="105" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Level 1 Branch 1: About Us -->
+        <mxCell id="node_about" value="1. About Us&#xa;(about.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;fontColor=#4f46e5;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="230" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Level 1 Branch 2: Course Catalog -->
+        <mxCell id="node_courses" value="2. Course Catalog&#xa;(courses.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;fontColor=#4f46e5;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="230" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Level 1 Branch 3: Contact & Support -->
+        <mxCell id="node_contact" value="3. Contact &amp; Support&#xa;(contact.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;fontColor=#4f46e5;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="230" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Level 1 Branch 4: Authentication Gate -->
+        <mxCell id="node_auth" value="4. User Login / Register&#xa;(login.html / register.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;fontColor=#4f46e5;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="230" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Level 1 Branch 5: Student Portal Dashboard -->
+        <mxCell id="node_dashboard" value="5. Student Dashboard&#xa;(dashboard.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;fontColor=#047857;strokeColor=#10b981;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="230" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors from Home to Level 1 -->
+        <mxCell id="edge_home_about" edge="1" parent="1" source="node_home" target="node_about" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4f46e5;strokeWidth=2;" />
+        <mxCell id="edge_home_courses" edge="1" parent="1" source="node_home" target="node_courses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4f46e5;strokeWidth=2;" />
+        <mxCell id="edge_home_contact" edge="1" parent="1" source="node_home" target="node_contact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4f46e5;strokeWidth=2;" />
+        <mxCell id="edge_home_auth" edge="1" parent="1" source="node_home" target="node_auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4f46e5;strokeWidth=2;" />
+        <mxCell id="edge_home_dash" edge="1" parent="1" source="node_home" target="node_dashboard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10b981;strokeWidth=2;" />
+
+        <!-- Level 2 Sub-Node: Student Feedback under Contact -->
+        <mxCell id="node_feedback" value="3.1 Student Feedback&#xa;(feedback.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;fontColor=#4f46e5;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="340" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_contact_feedback" edge="1" parent="1" source="node_contact" target="node_feedback" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4f46e5;" />
+
+        <!-- Auth Flow Edge to Dashboard -->
+        <mxCell id="edge_auth_dash" edge="1" parent="1" source="node_auth" target="node_dashboard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#10b981;strokeWidth=2;dashed=1;" />
+
+        <!-- Level 2 Sub-Nodes under Student Dashboard -->
+        <mxCell id="node_profile" value="5.1 Student Profile&#xa;(profile.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;fontColor=#b45309;strokeColor=#f59e0b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="340" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="node_settings" value="5.2 Account Settings&#xa;(settings.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;fontColor=#b45309;strokeColor=#f59e0b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="340" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="node_admin" value="6. Admin Portal&#xa;(admin.html)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;fontColor=#b91c1c;strokeColor=#ef4444;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="440" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Dashboard Subnode Connectors -->
+        <mxCell id="edge_dash_profile" edge="1" parent="1" source="node_dashboard" target="node_profile" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#f59e0b;" />
+        <mxCell id="edge_dash_settings" edge="1" parent="1" source="node_dashboard" target="node_settings" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#f59e0b;" />
+        <mxCell id="edge_dash_admin" edge="1" parent="1" source="node_dashboard" target="node_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#ef4444;" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- Tab 2: Desktop Layout Wireframe -->
+  <diagram id="wireframe_desktop" name="Practical 1 - Desktop Wireframe (1200px)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="browser_desktop" value="Desktop Layout Viewport (1200px Container Width)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#64748b;verticalAlign=top;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1000" height="680" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hdr" value="&lt;header class=&quot;site-header&quot;&gt;&#xa;Logo: StudentHub          Flexbox Nav: Home | About | Courses | Contact | Feedback          [Log In]  [Register]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4f46e5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="960" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bc" value="&lt;nav aria-label=&quot;Breadcrumb&quot;&gt; Home &gt; Current Category &gt; Active Page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;align=left;spacingLeft=15;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="960" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hero" value="&lt;section class=&quot;page-header&quot;&gt;&#xa;Page Main Title (H1)&#xa;Description Subtitle Paragraph" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="195" width="960" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="main_sec" value="&lt;main id=&quot;main-content&quot;&gt;&#xa;&#xa;CSS Grid System (.grid-3 - Three Column Desktop Cards)&#xa;&#xa;[ Article Card 1 ]          [ Article Card 2 ]          [ Article Card 3 ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;verticalAlign=top;padding=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="330" width="660" height="260" as="geometry" />
+        </mxCell>
+
+        <mxCell id="side_sec" value="&lt;aside class=&quot;sidebar&quot;&gt;&#xa;Sidebar Flexbox Column&#xa;- Quick Links&#xa;- Announcements&#xa;- Help Guidelines" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;verticalAlign=top;padding=10;" vertex="1" parent="1">
+          <mxGeometry x="740" y="330" width="280" height="260" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ftr" value="&lt;footer class=&quot;site-footer&quot;&gt;&#xa;Footer CSS Grid (4 Columns) | Navigation | Tools | Account | © 2026 CHARUSAT ITUE203" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0f172a;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="605" width="960" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- Tab 3: Tablet Layout Wireframe -->
+  <diagram id="wireframe_tablet" name="Practical 3 - Tablet Layout (768px - 992px)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t_frame" value="Tablet Viewport (768px Breakpoint: @media max-width: 992px)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#64748b;verticalAlign=top;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="150" y="40" width="700" height="700" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t_hdr" value="&lt;header&gt; Logo: StudentHub   |   Flex Nav   |   [Log In]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4f46e5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="80" width="660" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t_bc" value="Home &gt; Active Category &gt; Page Title" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="170" y="145" width="660" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t_hero" value="Page Banner Header (Single Column Title)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="185" width="660" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t_grid" value="&lt;main&gt;&#xa;CSS Grid 2-Column Responsive Layout (.grid-2)&#xa;&#xa;[ Card Article 1 ]                  [ Card Article 2 ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;verticalAlign=top;padding=10;" vertex="1" parent="1">
+          <mxGeometry x="170" y="295" width="660" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t_aside" value="&lt;aside&gt; Sidebar Widget (Full Width Stack below Main Content)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="485" width="660" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t_footer" value="&lt;footer&gt; Footer 2-Column Responsive Layout" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0f172a;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="170" y="595" width="660" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- Tab 4: Mobile Layout Wireframe -->
+  <diagram id="wireframe_mobile" name="Practical 3 - Mobile Layout (375px)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="m_frame" value="Mobile Viewport (@media max-width: 768px)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="360" height="730" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_hdr" value="StudentHub               [≡ Menu Button]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4f46e5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="80" width="330" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_nav_drawer" value="[Collapsible Mobile Nav Menu]&#xa;Home | About | Courses | Contact | Feedback | Login" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#818cf8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="415" y="135" width="330" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_bc" value="Home &gt; Active Page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="415" y="200" width="330" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_hero" value="Hero Banner (Single Column Stack)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#818cf8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="235" width="330" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_card1" value="[Card Article 1 - 100% Width]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="335" width="330" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_card2" value="[Card Article 2 - 100% Width]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="435" width="330" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_aside" value="Sidebar (Stacked Below Main Content)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;" vertex="1" parent="1">
+          <mxGeometry x="415" y="535" width="330" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_footer" value="Footer (Single Column Links Stack)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0f172a;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="415" y="635" width="330" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+</mxfile>

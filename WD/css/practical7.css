@@ -1,0 +1,132 @@
+/* Practical 7 Dedicated Stylesheet */
+.p7-message {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.p7-success {
+  background-color: rgba(16, 185, 129, 0.12);
+  border: 1px solid var(--success);
+  color: #047857;
+}
+
+[data-theme="dark"] .p7-success {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.p7-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  color: #b91c1c;
+}
+
+[data-theme="dark"] .p7-error {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+.p7-error ul {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.p7-form-nav {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.p7-nav-btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.p7-nav-btn.active, .p7-nav-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.p7-format-selector {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.p7-format-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.p7-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.p7-badge-csv {
+  background: #0284c7;
+  color: #fff;
+}
+
+.p7-badge-json {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.p7-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+.p7-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.p7-table th,
+.p7-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.p7-table th {
+  background: var(--bg-alt);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.p7-table tr:hover {
+  background-color: rgba(79, 70, 229, 0.04);
+}
+
+@media (max-width: 768px) {
+  .p7-table {
+    min-width: 650px;
+  }
+}

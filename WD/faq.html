@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently Asked Questions about StudentHub portal, course registration, academic calendar, and campus services at CHARUSAT." />
+  <title>FAQ &mdash; Frequently Asked Questions | StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link" aria-current="page">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb" class="breadcrumb-wrapper">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">FAQ</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Page Header -->
+    <section class="hero" aria-labelledby="faq-page-heading">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="faq-page-heading" class="hero-title">Frequently Asked <span class="text-accent">Questions</span></h1>
+          <p class="hero-subtitle">Find fast, comprehensive answers to academic questions, portal credentials, and campus guidelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section" aria-labelledby="faq-section-heading">
+      <div class="container" style="max-width: 900px;">
+        <h2 id="faq-section-heading" class="section-title">Common Questions &amp; Answers</h2>
+        <p class="section-subtitle">Click on any question below to expand and read details.</p>
+
+        <div class="accordion" id="faq-accordion-list">
+
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-ans-1"
+              id="faq-header-1"
+            >
+              <span>What credentials do I need to log in to StudentHub?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-ans-1"
+              role="region"
+              aria-labelledby="faq-header-1"
+              hidden
+            >
+              <p>
+                You must use your official university student ID (e.g., <code>D26DCE173</code>) and the registered password you created during enrollment. If you are a new student, complete the <a href="register.html">Student Registration form</a> first.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-ans-2"
+              id="faq-header-2"
+            >
+              <span>How does client-side validation protect form inputs?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-ans-2"
+              role="region"
+              aria-labelledby="faq-header-2"
+              hidden
+            >
+              <p>
+                As demonstrated in Practical 5, JavaScript regular expressions check input format (10-digit mobile, complex password, valid university email) on <code>input</code> and <code>blur</code> events, providing instant visual feedback and preventing erroneous HTTP requests.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-ans-3"
+              id="faq-header-3"
+            >
+              <span>How does Practical 6 fetch and display external JSON data?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-ans-3"
+              role="region"
+              aria-labelledby="faq-header-3"
+              hidden
+            >
+              <p>
+                In Practical 6, JavaScript uses the modern <code>fetch()</code> API to retrieve <code>data/events.json</code>, <code>data/students.json</code>, and <code>data/faqs.json</code>. The received data is parsed and filtered with debounced search, category selectors, ascending/descending sorting, and client-side pagination of 6 items per page.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-ans-4"
+              id="faq-header-4"
+            >
+              <span>How does Practical 7 secure server-side form submissions?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-ans-4"
+              role="region"
+              aria-labelledby="faq-header-4"
+              hidden
+            >
+              <p>
+                In Practical 7, forms submit via HTTP <code>POST</code>. PHP verifies an anti-CSRF token using <code>hash_equals()</code>, sanitizes inputs, enforces length and character restrictions, protects CSV writes with exclusive file locking (<code>flock</code>), and safely renders stored records back to the browser with <code>htmlspecialchars()</code>.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-ans-5"
+              id="faq-header-5"
+            >
+              <span>How can I reset my account password if forgotten?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-ans-5"
+              role="region"
+              aria-labelledby="faq-header-5"
+              hidden
+            >
+              <p>
+                Visit the <a href="login.html">Login</a> page and click the "Forgot Password" link. Alternatively, submit a support ticket via <a href="practical7.php">Practical 7 Form</a> and select the "Account Help" subject.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-ans-6"
+              id="faq-header-6"
+            >
+              <span>Where can I submit feedback regarding the portal experience?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-ans-6"
+              role="region"
+              aria-labelledby="faq-header-6"
+              hidden
+            >
+              <p>
+                We welcome your suggestions! Navigate to the <a href="feedback.html">Feedback Page</a> or use the Contact &amp; Support form to submit your valuable input directly to our web engineering team.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /.accordion -->
+
+        <div class="card" style="margin-top: 3rem; text-align: center; background: var(--bg-alt);">
+          <h3>Still have questions?</h3>
+          <p class="text-muted" style="margin: 0.5rem 0 1.25rem 0;">Our administrative and IT support desk is available to assist you Monday through Saturday.</p>
+          <a href="contact.html" class="btn btn-primary">Contact Support Desk</a>
+          <a href="practical7.php" class="btn btn-outline" style="margin-left: 0.5rem;">Submit Ticket via PHP</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University &mdash; streamlining communication, course management, and student progress tracking.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Frameworks Lab</h4>
+          <ul>
+            <li><a href="practical6.html">Data Explorer (P6)</a></li>
+            <li><a href="practical7.php">PHP Storage (P7)</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Authentication</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203 Web Development Frameworks</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

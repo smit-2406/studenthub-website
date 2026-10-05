@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StudentHub — Your Central Digital Campus Portal for CHARUSAT University. Access courses, track progress, view notices and more." />
+  <title>Home | StudentHub — CHARUSAT</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>🎓 Semester 3 Registration is now open! <a href="register.html" style="color:#fff;text-decoration:underline;">Register Now</a></span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-heading" class="hero-title">Welcome to <span class="text-accent">StudentHub</span></h1>
+          <p class="hero-subtitle">Your Central Digital Campus Portal — Courses, Progress, Notices, and More</p>
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary btn-lg">Get Started</a>
+            <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
+            <button id="open-modal-btn" class="btn btn-secondary btn-lg">View Campus Info</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PRACTICAL 4: INTERACTIVE IMAGE / CONTENT SLIDER
+    ════════════════════════════════════════════ -->
+    <section class="slider-section" aria-labelledby="slider-heading">
+      <div class="container">
+        <div class="section-header" style="text-align:center;margin-bottom:1.5rem;">
+          <h2 id="slider-heading" class="section-title">Featured Highlights &amp; Announcements</h2>
+          <p class="section-subtitle">Swipe or use arrows to navigate latest university events and updates</p>
+        </div>
+        <div class="slider-container" aria-roledescription="carousel" aria-label="Featured University Highlights">
+          <div class="slider-track">
+
+            <!-- Slide 1 -->
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <span class="slide-tag">Campus Hackathon</span>
+              <h3 class="slide-title">CHARUSAT CodeSprint 2026: 36-Hour National Hackathon</h3>
+              <p class="slide-desc">Compete with 500+ student innovators across India, build AI and web solutions, and win prizes worth &#8377;2,50,000.</p>
+              <div class="slide-actions">
+                <a href="events.html" class="btn btn-primary btn-sm">View Event Details &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <span class="slide-tag">Academic Circular</span>
+              <h3 class="slide-title">Odd Semester 2026-27 Course Registration &amp; Schedules</h3>
+              <p class="slide-desc">Course enrollment for B.Tech CSE, IT, EC, and ME is now live. Complete elective selection before the final deadline.</p>
+              <div class="slide-actions">
+                <a href="courses.html" class="btn btn-primary btn-sm">Browse Courses &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <span class="slide-tag">Live Data Systems</span>
+              <h3 class="slide-title">Interactive Data Explorer (Fetch API) &amp; PHP Server Processing</h3>
+              <p class="slide-desc">Experience client-side asynchronous JSON rendering with filters and server-side validated form storage in CSV/JSON format.</p>
+              <div class="slide-actions">
+                <a href="practical6.html" class="btn btn-primary btn-sm">Open Data Explorer &rarr;</a>
+                <a href="practical7.php" class="btn btn-outline btn-sm" style="margin-left:0.5rem;">Try Practical 7 &rarr;</a>
+              </div>
+            </div>
+
+          </div><!-- /.slider-track -->
+
+          <!-- Slider Controls -->
+          <button class="slider-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+          <button class="slider-btn next-btn" aria-label="Next slide">&#10095;</button>
+
+          <!-- Slider Dot Indicators -->
+          <div class="slider-indicators" role="tablist" aria-label="Slide dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         STATS SECTION
+    ════════════════════════════════════════════ -->
+    <section class="section section-alt" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 id="stats-heading" class="section-title">StudentHub at a Glance</h2>
+        <p class="section-subtitle">Empowering thousands of students across CHARUSAT University every day.</p>
+        <div class="grid grid-4">
+
+          <div class="stat-card" role="img" aria-label="1200 plus students enrolled">
+            <div class="stat-icon" aria-hidden="true">🎓</div>
+            <div class="stat-number">1200+</div>
+            <div class="stat-label">Students</div>
+          </div>
+
+          <div class="stat-card" role="img" aria-label="48 courses available">
+            <div class="stat-icon" aria-hidden="true">📚</div>
+            <div class="stat-number">48</div>
+            <div class="stat-label">Courses</div>
+          </div>
+
+          <div class="stat-card" role="img" aria-label="15 departments">
+            <div class="stat-icon" aria-hidden="true">🏛️</div>
+            <div class="stat-number">15</div>
+            <div class="stat-label">Departments</div>
+          </div>
+
+          <div class="stat-card" role="img" aria-label="98 percent satisfaction rate">
+            <div class="stat-icon" aria-hidden="true">⭐</div>
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FAQ ACCORDION SECTION
+    ════════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Quick answers to the most common queries about StudentHub.</p>
+
+        <div class="accordion" id="faq-accordion">
+
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-panel-1"
+              id="faq-btn-1"
+            >
+              <span>What is StudentHub?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-panel-1"
+              role="region"
+              aria-labelledby="faq-btn-1"
+              hidden
+            >
+              <p>
+                StudentHub is the official central digital campus portal of CHARUSAT University. It brings together course management, academic notices, student progress tracking, department announcements, and administrative tools — all in one accessible, responsive web application. Whether you are a student, faculty member, or administrator, StudentHub is designed to simplify your campus experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-panel-2"
+              id="faq-btn-2"
+            >
+              <span>How do I register for a new semester?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-panel-2"
+              role="region"
+              aria-labelledby="faq-btn-2"
+              hidden
+            >
+              <p>
+                Registering for a new semester is quick and easy. Simply click the <strong>Register Now</strong> link in the notification banner or navigate to <a href="register.html">register.html</a>. Fill in your student ID, personal details, and select your desired courses for the upcoming semester. Ensure you complete registration before the stated deadline to avoid late fees. If you face any issues, contact the Help Center.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button
+              class="accordion-header"
+              aria-expanded="false"
+              aria-controls="faq-panel-3"
+              id="faq-btn-3"
+            >
+              <span>How do I reset my StudentHub password?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div
+              class="accordion-panel"
+              id="faq-panel-3"
+              role="region"
+              aria-labelledby="faq-btn-3"
+              hidden
+            >
+              <p>
+                If you have forgotten your password, go to the <a href="login.html">Login</a> page and click the <strong>"Forgot Password?"</strong> link. Enter your registered university email address and you will receive a password reset link within a few minutes. If you do not receive the email, please check your spam folder or contact the <a href="contact.html">Help Center</a> for further assistance.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /.accordion -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       CAMPUS INFO MODAL
+  ════════════════════════════════════════════ -->
+  <div
+    class="modal-overlay"
+    id="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-describedby="modal-desc"
+    hidden
+  >
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="modal-title">🏫 CHARUSAT University Campus Info</h2>
+        <button
+          id="close-modal-btn"
+          class="modal-close-btn"
+          aria-label="Close campus info dialog"
+        >&times;</button>
+      </div>
+      <div class="modal-body" id="modal-desc">
+        <p class="modal-intro">
+          Welcome to the CHARUSAT campus! Here is a quick overview of our vibrant university community.
+        </p>
+        <ul class="modal-info-list">
+          <li>
+            <span class="modal-info-icon" aria-hidden="true">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>CHARUSAT University, Off National Highway 8,<br />Changa — 388421, Anand, Gujarat, India</p>
+            </div>
+          </li>
+          <li>
+            <span class="modal-info-icon" aria-hidden="true">📅</span>
+            <div>
+              <strong>Established</strong>
+              <p>1955 — Over 70 years of academic excellence in Gujarat.</p>
+            </div>
+          </li>
+          <li>
+            <span class="modal-info-icon" aria-hidden="true">🏟️</span>
+            <div>
+              <strong>Campus Facilities</strong>
+              <ul class="modal-facilities">
+                <li>🔬 State-of-the-art Research Laboratories</li>
+                <li>📖 Central Library with digital access</li>
+                <li>🏋️ Sports Complex & Indoor Gymnasium</li>
+                <li>🍽️ Multi-cuisine Student Cafeteria</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="about.html" class="btn btn-primary btn-sm">Learn More About Us</a>
+        <button id="close-modal-btn-footer" class="btn btn-outline btn-sm" onclick="document.getElementById('modal-overlay').setAttribute('hidden','')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University — streamlining communication, course management, and student progress tracking.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203 Web Development Frameworks</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

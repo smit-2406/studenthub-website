@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "question": "What is the admission process for B.Tech at CHARUSAT?",
+    "answer": "Admission to B.Tech programs is based on JEE Main scores or GUJCET scores followed by ACPC counseling. Students can also apply through the management quota by filling out the university admission form and appearing for a personal interview.",
+    "category": "Admission",
+    "priority": "high",
+    "helpful": 47,
+    "notHelpful": 3
+  },
+  {
+    "id": 2,
+    "question": "When are the end semester examinations conducted?",
+    "answer": "End semester examinations are typically conducted in May (even semester) and November-December (odd semester). The exact schedule is published on the university website at least 3 weeks before the exam commencement date.",
+    "category": "Examination",
+    "priority": "high",
+    "helpful": 42,
+    "notHelpful": 2
+  },
+  {
+    "id": 3,
+    "question": "What is the fee structure for B.Tech programs?",
+    "answer": "The annual tuition fee for B.Tech programs ranges from ₹1,00,000 to ₹1,50,000 depending on the branch. Additional charges include examination fees, library fees, laboratory fees, and activity fees. Detailed fee breakdowns are available at the admission office.",
+    "category": "Fees",
+    "priority": "high",
+    "helpful": 45,
+    "notHelpful": 5
+  },
+  {
+    "id": 4,
+    "question": "Is hostel accommodation available for all students?",
+    "answer": "Yes, CHARUSAT provides separate hostel facilities for boys and girls on a first-come-first-served basis. Hostel rooms are available in single, double, and triple sharing options with amenities like Wi-Fi, laundry, mess, and 24/7 security.",
+    "category": "Hostel",
+    "priority": "high",
+    "helpful": 38,
+    "notHelpful": 4
+  },
+  {
+    "id": 5,
+    "question": "Which companies visit the campus for placements?",
+    "answer": "Top recruiters include TCS, Infosys, Wipro, Cognizant, Capgemini, Deloitte, Amazon, Zeta, Crest Data Systems, and many more. Over 150 companies participate in the annual placement drive with the highest package reaching up to ₹24 LPA.",
+    "category": "Placement",
+    "priority": "high",
+    "helpful": 50,
+    "notHelpful": 1
+  },
+  {
+    "id": 6,
+    "question": "What documents are required for the admission process?",
+    "answer": "Required documents include: 10th & 12th marksheets, JEE Main/GUJCET scorecard, ACPC allotment letter, school leaving certificate, migration certificate, caste certificate (if applicable), Aadhaar card, passport-size photographs, and a medical fitness certificate.",
+    "category": "Admission",
+    "priority": "medium",
+    "helpful": 35,
+    "notHelpful": 2
+  },
+  {
+    "id": 7,
+    "question": "How can I apply for re-evaluation of my exam paper?",
+    "answer": "Students can apply for re-evaluation within 10 days of result declaration by submitting a re-evaluation form along with a fee of ₹500 per subject at the examination department. Results of re-evaluation are typically declared within 30 days.",
+    "category": "Examination",
+    "priority": "medium",
+    "helpful": 28,
+    "notHelpful": 6
+  },
+  {
+    "id": 8,
+    "question": "Are there any scholarships available for students?",
+    "answer": "Yes, CHARUSAT offers merit-based scholarships for students scoring above 90% in their board exams. Additional scholarships are available through government schemes like MYSY (Mukhyamantri Yuva Swavalamban Yojana) and various private trust scholarships for economically weaker students.",
+    "category": "Fees",
+    "priority": "medium",
+    "helpful": 40,
+    "notHelpful": 3
+  },
+  {
+    "id": 9,
+    "question": "What are the hostel mess timings?",
+    "answer": "Mess timings are: Breakfast 7:30 AM - 9:00 AM, Lunch 12:30 PM - 2:00 PM, Evening Snacks 5:00 PM - 6:00 PM, and Dinner 7:30 PM - 9:00 PM. The mess provides both vegetarian and Jain food options.",
+    "category": "Hostel",
+    "priority": "medium",
+    "helpful": 32,
+    "notHelpful": 4
+  },
+  {
+    "id": 10,
+    "question": "What is the minimum CGPA required to sit for placements?",
+    "answer": "Students must have a minimum CGPA of 6.0 with no active backlogs to be eligible for campus placements. Some companies may have higher CGPA requirements (7.0 or above) which are communicated during the pre-placement talk.",
+    "category": "Placement",
+    "priority": "high",
+    "helpful": 44,
+    "notHelpful": 2
+  },
+  {
+    "id": 11,
+    "question": "Can I change my branch after admission?",
+    "answer": "Branch change is allowed after the first year based on seat availability and academic performance. Students must have a minimum CGPA of 7.5 with no backlogs. The process is conducted during June-July after the first year results are declared.",
+    "category": "Admission",
+    "priority": "medium",
+    "helpful": 33,
+    "notHelpful": 7
+  },
+  {
+    "id": 12,
+    "question": "What is the passing criteria for university examinations?",
+    "answer": "Students must score a minimum of 40% in the end semester examination (external) and 40% in internal assessment (mid-sem + assignments + practicals). An overall minimum of 40% combining both internal and external components is required to pass each subject.",
+    "category": "Examination",
+    "priority": "high",
+    "helpful": 39,
+    "notHelpful": 3
+  },
+  {
+    "id": 13,
+    "question": "Is there an installment facility for fee payment?",
+    "answer": "Yes, the university offers a two-installment fee payment option. The first installment (60% of total fees) must be paid at the time of admission, and the second installment (remaining 40%) can be paid within 3 months of the semester start date.",
+    "category": "Fees",
+    "priority": "medium",
+    "helpful": 29,
+    "notHelpful": 5
+  },
+  {
+    "id": 14,
+    "question": "What are the rules for hostel visitors?",
+    "answer": "Visitors are allowed in the hostel common area only between 10:00 AM and 6:00 PM on weekdays and 9:00 AM to 7:00 PM on weekends. All visitors must register at the hostel reception with valid ID proof. Overnight stays for visitors are not permitted.",
+    "category": "Hostel",
+    "priority": "low",
+    "helpful": 18,
+    "notHelpful": 8
+  },
+  {
+    "id": 15,
+    "question": "Does the placement cell provide internship opportunities?",
+    "answer": "Yes, the Training & Placement Cell actively facilitates summer and winter internship opportunities for students from the 4th semester onwards. Companies like TCS, Infosys, and various startups offer internships ranging from 2 to 6 months with stipends.",
+    "category": "Placement",
+    "priority": "medium",
+    "helpful": 36,
+    "notHelpful": 4
+  }
+]

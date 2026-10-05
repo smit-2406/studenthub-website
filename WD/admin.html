@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CHARUSAT StudentHub – Admin Portal Dashboard for managing students, courses, and system activity." />
+  <title>Admin Portal – CHARUSAT StudentHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner" id="notification-banner" role="alert">
+    <span>📢 System Maintenance scheduled on Sunday 2AM–4AM IST. Services may be unavailable.</span>
+    <button class="banner-close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-icon" aria-hidden="true">SH</span>
+          StudentHub
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" id="main-nav" role="navigation" aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="practical7.php" class="nav-link">Practical 7</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle-btn" class="btn btn-outline btn-sm" aria-label="Toggle dark mode">🌙 Dark</button>
+          <a href="profile.html" class="btn btn-outline btn-sm">👤 Admin</a>
+          <a href="login.html" class="btn btn-sm btn-danger">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" role="list">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-item" aria-current="page">Admin Portal</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- App Container (Sidebar + Main) -->
+  <div class="app-container container">
+
+    <!-- Admin Sidebar -->
+    <aside class="sidebar" role="complementary" aria-label="Admin sidebar">
+      <p class="sidebar-title">Admin Menu</p>
+      <ul class="sidebar-menu">
+        <li><a href="admin.html" class="sidebar-link" aria-current="page">🛡️ Admin Dashboard</a></li>
+        <li><a href="dashboard.html" class="sidebar-link">📊 Student View</a></li>
+        <li><a href="courses.html" class="sidebar-link">📚 Manage Courses</a></li>
+        <li><a href="feedback.html" class="sidebar-link">💬 Feedback</a></li>
+        <li><a href="settings.html" class="sidebar-link">⚙️ Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content" role="main">
+
+      <!-- Page Heading -->
+      <div class="page-header">
+        <h1 class="page-title">
+          Admin Portal Dashboard
+          <span class="badge badge-admin">Administrator</span>
+        </h1>
+        <p class="page-subtitle">Manage students, courses, and monitor system health.</p>
+      </div>
+
+      <!-- Stats Row -->
+      <section class="stats-row grid-4" aria-label="Key statistics">
+
+        <div class="stat-card">
+          <div class="stat-icon" aria-hidden="true">🎓</div>
+          <div class="stat-info">
+            <span class="stat-value">1,247</span>
+            <span class="stat-label">Total Students</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon" aria-hidden="true">📚</div>
+          <div class="stat-info">
+            <span class="stat-value">48</span>
+            <span class="stat-label">Active Courses</span>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--warning">
+          <div class="stat-icon" aria-hidden="true">⏳</div>
+          <div class="stat-info">
+            <span class="stat-value">12</span>
+            <span class="stat-label">Pending Approvals</span>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--success">
+          <div class="stat-icon" aria-hidden="true">🟢</div>
+          <div class="stat-info">
+            <span class="stat-value">99.8%</span>
+            <span class="stat-label">System Uptime</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Two-Column Section -->
+      <div class="grid-2 mt-4">
+
+        <!-- Registered Students Table -->
+        <section class="card" aria-labelledby="students-table-heading">
+          <div class="card-header">
+            <h2 class="card-title" id="students-table-heading">Registered Students</h2>
+            <a href="#" class="btn btn-sm btn-outline">View All</a>
+          </div>
+          <div class="card-body table-responsive">
+            <table class="data-table" aria-label="Registered students list">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Enrollment</th>
+                  <th scope="col">Dept</th>
+                  <th scope="col">Sem</th>
+                  <th scope="col">CGPA</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aarav Patel</td>
+                  <td>CE220101</td>
+                  <td>CE</td>
+                  <td>Sem 6</td>
+                  <td>8.72</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Diya Sharma</td>
+                  <td>CE220215</td>
+                  <td>IT</td>
+                  <td>Sem 6</td>
+                  <td>9.15</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Vivaan Mehta</td>
+                  <td>CE220342</td>
+                  <td>CE</td>
+                  <td>Sem 4</td>
+                  <td>7.88</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Arjun Nair</td>
+                  <td>CE220789</td>
+                  <td>CE</td>
+                  <td>Sem 8</td>
+                  <td>9.32</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Kavya Trivedi</td>
+                  <td>CE220834</td>
+                  <td>Civil</td>
+                  <td>Sem 2</td>
+                  <td>7.65</td>
+                  <td><span class="badge badge-danger">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>Dev Pandya</td>
+                  <td>CE221398</td>
+                  <td>CE</td>
+                  <td>Sem 4</td>
+                  <td>9.01</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- System Activity Card -->
+        <section class="card" aria-labelledby="activity-heading">
+          <div class="card-header">
+            <h2 class="card-title" id="activity-heading">System Activity</h2>
+            <span class="badge badge-info">Live</span>
+          </div>
+          <div class="card-body">
+            <ul class="activity-log" aria-label="Recent system activity">
+              <li class="activity-item">
+                <span class="activity-time">16:00</span>
+                <span class="activity-icon" aria-hidden="true">✅</span>
+                <span class="activity-desc">Diya Sharma submitted Assignment 3 for <strong>Data Structures</strong>.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">15:47</span>
+                <span class="activity-icon" aria-hidden="true">🔐</span>
+                <span class="activity-desc">Admin logged in from IP <strong>10.0.0.45</strong>.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">15:30</span>
+                <span class="activity-icon" aria-hidden="true">📚</span>
+                <span class="activity-desc">New course <strong>Machine Learning Fundamentals</strong> created by Prof. Shah.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">15:12</span>
+                <span class="activity-icon" aria-hidden="true">⏳</span>
+                <span class="activity-desc">Approval request pending for <strong>Kavya Trivedi</strong> – Leave Application.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">14:55</span>
+                <span class="activity-icon" aria-hidden="true">🛠️</span>
+                <span class="activity-desc">System maintenance window configured for <strong>Sunday 2AM–4AM IST</strong>.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">14:40</span>
+                <span class="activity-icon" aria-hidden="true">📝</span>
+                <span class="activity-desc">Arjun Nair updated profile – Semester changed to <strong>Sem 8</strong>.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">14:20</span>
+                <span class="activity-icon" aria-hidden="true">🎓</span>
+                <span class="activity-desc">6 new students enrolled in <strong>Computer Networks</strong>.</span>
+              </li>
+              <li class="activity-item">
+                <span class="activity-time">14:05</span>
+                <span class="activity-icon" aria-hidden="true">💬</span>
+                <span class="activity-desc">New feedback received from <strong>Vivaan Mehta</strong> – Portal Experience.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div><!-- /.grid-2 -->
+
+      <!-- Audit Log Section -->
+      <section class="card mt-4" aria-labelledby="audit-log-heading">
+        <div class="card-header">
+          <h2 class="card-title" id="audit-log-heading">Audit Log</h2>
+          <button class="btn btn-sm btn-outline" aria-label="Export audit log">⬇️ Export</button>
+        </div>
+        <div class="card-body table-responsive">
+          <table class="data-table" aria-label="Audit log entries">
+            <thead>
+              <tr>
+                <th scope="col">Timestamp</th>
+                <th scope="col">User</th>
+                <th scope="col">Action</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026-09-28 16:00:14</td>
+                <td>CE220215 – Diya Sharma</td>
+                <td>Assignment submission – Data Structures (Assignment 3)</td>
+                <td><span class="badge badge-success">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 15:47:03</td>
+                <td>admin@charusat.ac.in</td>
+                <td>Admin login – IP 10.0.0.45</td>
+                <td><span class="badge badge-success">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 15:30:22</td>
+                <td>prof.shah@charusat.ac.in</td>
+                <td>Course created – Machine Learning Fundamentals</td>
+                <td><span class="badge badge-success">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 15:12:45</td>
+                <td>CE220834 – Kavya Trivedi</td>
+                <td>Leave application submitted – pending approval</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 14:55:10</td>
+                <td>admin@charusat.ac.in</td>
+                <td>Maintenance window scheduled – Sunday 2AM–4AM IST</td>
+                <td><span class="badge badge-info">Scheduled</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 14:40:58</td>
+                <td>CE220789 – Arjun Nair</td>
+                <td>Profile updated – semester field modified</td>
+                <td><span class="badge badge-success">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 14:20:33</td>
+                <td>system</td>
+                <td>Bulk enrollment – Computer Networks (6 students)</td>
+                <td><span class="badge badge-success">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 13:58:19</td>
+                <td>CE220342 – Vivaan Mehta</td>
+                <td>Attempted login – incorrect password (1st attempt)</td>
+                <td><span class="badge badge-danger">Failed</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 13:59:02</td>
+                <td>CE220342 – Vivaan Mehta</td>
+                <td>Login successful after password retry</td>
+                <td><span class="badge badge-success">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-28 13:10:05</td>
+                <td>admin@charusat.ac.in</td>
+                <td>Course deactivated – Legacy Web Design (archived)</td>
+                <td><span class="badge badge-warning">Archived</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main><!-- /#main-content -->
+
+  </div><!-- /.app-container -->
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>StudentHub</h3>
+          <p>A central digital campus web portal for CHARUSAT University.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Student</h4>
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 StudentHub &mdash; CHARUSAT ITUE203</p>
+        <p>Faculty of Technology &amp; Engineering (FTE)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
