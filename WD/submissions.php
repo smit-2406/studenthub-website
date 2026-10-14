@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 
 function escapeHtml(string $value): string
@@ -11,17 +11,17 @@ function csvSafeValue(string $value): string
     return preg_match('/^[=+@-]/', $value) === 1 ? "'" . $value : $value;
 }
 
-if (!isset($_SESSION['practical7_csrf'])) {
-    $_SESSION['practical7_csrf'] = bin2hex(random_bytes(32));
+if (!isset($_SESSION['submissions_csrf'])) {
+    $_SESSION['submissions_csrf'] = bin2hex(random_bytes(32));
 }
 
 $storageDirectory = __DIR__ . DIRECTORY_SEPARATOR . 'private';
-$csvFile = $storageDirectory . DIRECTORY_SEPARATOR . 'practical7_submissions.csv';
-$jsonFile = $storageDirectory . DIRECTORY_SEPARATOR . 'practical7_submissions.json';
+$csvFile = $storageDirectory . DIRECTORY_SEPARATOR . 'submissions.csv';
+$jsonFile = $storageDirectory . DIRECTORY_SEPARATOR . 'submissions.json';
 
 $errors = [];
-$flashMessage = $_SESSION['practical7_flash'] ?? '';
-unset($_SESSION['practical7_flash']);
+$flashMessage = $_SESSION['submissions_flash'] ?? '';
+unset($_SESSION['submissions_flash']);
 
 $formType = $_POST['form_type'] ?? 'contact';
 $storageFormat = $_POST['storage_format'] ?? 'csv';
@@ -37,7 +37,7 @@ $regValues = ['name' => '', 'email' => '', 'mobile' => '', 'course' => '', 'year
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $submittedToken = $_POST['csrf_token'] ?? '';
-    if (!is_string($submittedToken) || !hash_equals($_SESSION['practical7_csrf'], $submittedToken)) {
+    if (!is_string($submittedToken) || !hash_equals($_SESSION['submissions_csrf'], $submittedToken)) {
         $errors[] = 'Your security session expired. Please refresh the page and try again.';
     }
 
@@ -185,9 +185,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             if ($writeSuccess) {
-                $_SESSION['practical7_flash'] = 'Record saved successfully via server-side PHP in ' . strtoupper($storageFormat) . ' format!';
-                $_SESSION['practical7_csrf'] = bin2hex(random_bytes(32));
-                header('Location: practical7.php#records', true, 303);
+                $_SESSION['submissions_flash'] = 'Record saved successfully via server-side PHP in ' . strtoupper($storageFormat) . ' format!';
+                $_SESSION['submissions_csrf'] = bin2hex(random_bytes(32));
+                header('Location: submissions.php#records', true, 303);
                 exit;
             }
         }
@@ -222,10 +222,10 @@ if (is_readable($jsonFile)) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Practical 7: Server-side PHP form validation with CSV and JSON file storage." />
-  <title>Practical 7: PHP Form Processing &amp; Storage | StudentHub</title>
+  <meta name="description" content="StudentHub form validation with secure CSV and JSON file storage." />
+  <title>Form Processing &amp; Storage | StudentHub</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/practical7.css" />
+  <link rel="stylesheet" href="css/submissions.css" />
   <script>
     (function () {
       const savedTheme = localStorage.getItem('theme');
@@ -251,8 +251,8 @@ if (is_readable($jsonFile)) {
             <li><a href="events.html" class="nav-link">Events</a></li>
             <li><a href="faq.html" class="nav-link">FAQ</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="practical6.html" class="nav-link">Data Explorer</a></li>
-            <li><a href="practical7.php" class="nav-link" aria-current="page">Practical 7</a></li>
+            <li><a href="explorer.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="submissions.php" class="nav-link" aria-current="page">Submissions</a></li>
           </ul>
         </nav>
         <div class="nav-actions">
@@ -269,14 +269,14 @@ if (is_readable($jsonFile)) {
       <ol class="breadcrumb-list" role="list">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-separator" aria-hidden="true">›</li>
-        <li class="breadcrumb-item" aria-current="page">Practical 7: PHP Form Processing</li>
+        <li class="breadcrumb-item" aria-current="page">Form Processing &amp; Storage</li>
       </ol>
     </div>
   </nav>
 
   <section class="page-header" aria-labelledby="page-title">
     <div class="container">
-      <h1 id="page-title">Practical 7: PHP Form Processing &amp; Storage</h1>
+      <h1 id="page-title">Campus Form Processing &amp; Storage</h1>
       <p>Server-side validation, anti-CSRF token, sanitization, and dual CSV / JSON file persistence</p>
     </div>
   </section>
@@ -317,8 +317,8 @@ if (is_readable($jsonFile)) {
         <h2 id="contact-heading">Contact &amp; Support Ticket Processing</h2>
         <p class="text-muted">Inputs are sanitized and validated on the server with PHP <code>filter_var()</code> and UTF-8 regex.</p>
 
-        <form action="practical7.php" method="post" style="margin-top:1.25rem;">
-          <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['practical7_csrf']) ?>" />
+        <form action="submissions.php" method="post" style="margin-top:1.25rem;">
+          <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['submissions_csrf']) ?>" />
           <input type="hidden" name="form_type" value="contact" />
 
           <!-- Storage Format Selector -->
@@ -363,8 +363,8 @@ if (is_readable($jsonFile)) {
         <h2 id="reg-heading">Student Registration Form (PHP Backend Processing)</h2>
         <p class="text-muted">Server-side validated submission with course and academic year persistence.</p>
 
-        <form action="practical7.php" method="post" style="margin-top:1.25rem;">
-          <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['practical7_csrf']) ?>" />
+        <form action="submissions.php" method="post" style="margin-top:1.25rem;">
+          <input type="hidden" name="csrf_token" value="<?= escapeHtml($_SESSION['submissions_csrf']) ?>" />
           <input type="hidden" name="form_type" value="registration" />
 
           <!-- Storage Format Selector -->

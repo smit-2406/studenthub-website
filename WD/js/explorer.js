@@ -686,7 +686,7 @@ function setupEventListeners() {
   // Tab switching
   DOM.tabs().forEach(tab => {
     tab.addEventListener('click', () => {
-      const target = tab.dataset.target;
+      const target = tab.dataset.tab;
       if (target === AppState.currentTab) return;
 
       // Update tab UI
