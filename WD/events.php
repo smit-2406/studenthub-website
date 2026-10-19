@@ -113,6 +113,7 @@ try {
             <li><a href="events.php" class="nav-link" aria-current="page">Events</a></li>
             <li><a href="explorer.html" class="nav-link">Data Explorer</a></li>
             <li><a href="students.php" class="nav-link">Students</a></li>
+            <li><a href="ajax-students.php" class="nav-link">AJAX CRUD</a></li>
             <li><a href="submissions.php" class="nav-link">Submissions</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>

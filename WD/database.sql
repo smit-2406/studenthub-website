@@ -183,14 +183,25 @@ INSERT INTO `events` (`id`, `category_id`, `title`, `slug`, `description`, `even
 (5, 5, 'AI & Robotics Research Symposium', 'ai-robotics-symposium', 'Keynotes by renowned machine learning scientists, project poster presentations, and live robotics demonstrations.', '2026-11-02', '11:00:00', 'Auditorium 1, FTE Building', 120, 'IEEE Student Branch', NULL, 'Upcoming'),
 (6, 1, 'CyberSec Capture The Flag (CTF)', 'cybersec-ctf', 'Intense competitive ethical hacking challenge testing web vulnerability exploitation, cryptography, and forensics.', '2026-10-30', '13:30:00', 'Network Security Lab, IT Dept', 60, 'Null Chapter CHARUSAT', NULL, 'Upcoming');
 
--- 5. Insert Sample Registrations
-INSERT INTO `registrations` (`event_id`, `student_id`, `attendance_status`, `notes`) VALUES
-(1, 1, 'Registered', 'Team Lead - Web track'),
-(2, 1, 'Registered', 'Interested in PHP 8 features'),
-(1, 2, 'Registered', 'Team member - Frontend'),
-(3, 2, 'Registered', 'Classical dance performance'),
-(2, 3, 'Registered', 'Full stack participant'),
-(5, 4, 'Registered', 'Research poster presenter');
+-- 5. Insert Sample Registrations (Across multiple months to feed Practical 14 Analytics Chart)
+INSERT INTO `registrations` (`event_id`, `student_id`, `registration_date`, `attendance_status`, `notes`) VALUES
+(1, 1, '2026-07-15 10:30:00', 'Attended', 'Team Lead - Web track'),
+(2, 1, '2026-07-28 14:15:00', 'Attended', 'Interested in PHP 8 features'),
+(3, 2, '2026-08-05 09:20:00', 'Attended', 'Classical dance performance'),
+(4, 3, '2026-08-18 16:45:00', 'Attended', 'Athletics participant'),
+(1, 2, '2026-08-25 11:10:00', 'Attended', 'Team member - Frontend'),
+(2, 4, '2026-09-02 12:00:00', 'Registered', 'Web workshop attendee'),
+(5, 5, '2026-09-12 15:30:00', 'Registered', 'Robotics symposium poster'),
+(6, 6, '2026-09-22 17:00:00', 'Registered', 'CTF team member'),
+(1, 7, '2026-10-02 08:45:00', 'Registered', 'Hackathon junior participant'),
+(2, 8, '2026-10-06 14:00:00', 'Registered', 'PHP backend enthusiast'),
+(3, 9, '2026-10-10 16:20:00', 'Registered', 'Cultural vocal singer'),
+(4, 10, '2026-10-14 10:15:00', 'Registered', 'Cricket team bowler'),
+(5, 11, '2026-10-16 11:30:00', 'Registered', 'AI researcher'),
+(6, 12, '2026-10-18 09:10:00', 'Registered', 'Security analyst'),
+(1, 13, '2026-11-01 13:45:00', 'Registered', 'Advance hackathon registration'),
+(2, 14, '2026-11-05 15:00:00', 'Registered', 'Web dev cohort 2'),
+(3, 15, '2026-12-01 10:00:00', 'Registered', 'Spoural stage management');
 
 -- 6. Insert Initial Audit Log
 INSERT INTO `audit_logs` (`user_id`, `action`, `details`, `ip_address`) VALUES

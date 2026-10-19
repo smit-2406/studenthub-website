@@ -349,6 +349,7 @@ $stmt->close();
             <li><a href="admin.php" class="nav-link">Admin Dashboard</a></li>
             <li><a href="students.php" class="nav-link">Students CRUD</a></li>
             <li><a href="manage-events.php" class="nav-link" aria-current="page">Manage Events</a></li>
+            <li><a href="ajax-students.php" class="nav-link">AJAX CRUD</a></li>
             <li><a href="events.php" class="nav-link" target="_blank">Public Events &nearr;</a></li>
             <li><a href="submissions.php" class="nav-link">Submissions</a></li>
             <li><a href="explorer.html" class="nav-link">Data Explorer</a></li>

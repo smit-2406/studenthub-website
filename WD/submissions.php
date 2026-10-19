@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 
 function escapeHtml(string $value): string
@@ -250,8 +250,9 @@ if (is_readable($jsonFile)) {
             <li><a href="courses.html" class="nav-link">Courses</a></li>
             <li><a href="events.html" class="nav-link">Events</a></li>
             <li><a href="faq.html" class="nav-link">FAQ</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
             <li><a href="explorer.html" class="nav-link">Data Explorer</a></li>
+            <li><a href="students.php" class="nav-link">Students</a></li>
+            <li><a href="ajax-students.php" class="nav-link">AJAX CRUD</a></li>
             <li><a href="submissions.php" class="nav-link" aria-current="page">Submissions</a></li>
           </ul>
         </nav>

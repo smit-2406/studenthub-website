@@ -1,6 +1,6 @@
 # CHARUSAT - ITUE203: Web Development Frameworks
 ## Semester 3 (2026-27 ODD) - Faculty of Technology and Engineering (FTE)
-### Project: StudentHub Portal (Completed through Practical 12)
+### Project: StudentHub Portal (Completed Practicals 1 through 15)
 
 ---
 
@@ -20,10 +20,13 @@
 | **Practical 10** | Secure Login/Logout with Sessions, Role-Based Access, Timeout & Remember-Me | Sessions, `password_verify()`, RBAC, Token Hash | `login.php`, `logout.php`, `auth.php`, `dashboard.php`, `admin.php` | ✅ Complete |
 | **Practical 11** | Student Management CRUD with Search, Filter & MySQLi Statements | Prepared Statements CRUD, Filter, CSV Export | `students.php` | ✅ Complete |
 | **Practical 12** | Event Management CRUD with Poster Upload & File Validation | Multipart Upload, MIME/Size Validation, Renaming | `manage-events.php`, `events.php`, `uploads/events/.htaccess` | ✅ Complete |
+| **Practical 13** | PHP JSON API and AJAX/Fetch-Based CRUD without Page Reload | RESTful JSON API, Fetch API, Debounce Search, Modal | `api-students.php`, `ajax-students.php`, `api/students.php` | ✅ Complete |
+| **Practical 14** | Admin Dashboard with Role-Based Access Control, Dynamic Menu & Audit Log | RBAC Dashboard, Metrics, Status Toggle, Chart | `admin.php`, `auth.php` | ✅ Complete |
+| **Practical 15** | Final Integration, Testing, Documentation, GitHub Submission & Local Deployment | System Integration, Verification Suite, Report | `test-suite.php`, `test-report.html`, `database.sql` | ✅ Complete |
 
 ---
 
-## 🏛️ System Architecture & Database ER Diagram (Practical 8)
+## 🏛️ System Architecture & Database ER Diagram (Practical 8, 14, 15)
 
 ```
        ┌────────────────────────┐
@@ -61,12 +64,11 @@
        └───────────┬────────────┘                  │ slug                   │
                    │                               │ description            │
                    │ 1 : N                         │ event_date, event_time │
-                   │                               │ venue, max_participant│
-                   ▼                               │ poster_path (uploads/) │
-       ┌────────────────────────┐                  │ status [Upcoming, etc.]│
-       │     registrations      │                  └───────────┬────────────┘
-       ├────────────────────────┤                              │
-       │ id (PK)                │                              │ 1 : N
+                   ▼                               │ venue, max_participant│
+       ┌────────────────────────┐                  │ poster_path (uploads/) │
+       │     registrations      │                  │ status [Upcoming, etc.]│
+       ├────────────────────────┤                  └───────────┬────────────┘
+       │ id (PK)                │                              │
        │ event_id (FK -> events)│◀─────────────────────────────┘
        │ student_id (FK -> stud)│
        │ registration_date      │
@@ -81,17 +83,22 @@
 
 ```
 WD/
-├── database.sql               # Complete MySQL schema & 20+ seeded records (Practicals 8-12)
-├── db.php                     # Dual MySQLi and PDO connection handler with auto-fallback
+├── database.sql               # Complete MySQL schema & 21+ seeded records across all 6 tables
+├── db.php                     # Dual MySQLi and PDO connection handler with auto-detection
 ├── auth.php                   # Authentication middleware, RBAC guards, session timeout & tokens
 ├── login.php                  # Secure authentication gate (Practical 10)
 ├── logout.php                 # Session destruction & cookie cleanup (Practical 10)
 ├── register.php               # Secure user registration with BCRYPT hashing (Practical 9)
 ├── dashboard.php              # Authenticated student dashboard (Practical 10)
-├── admin.php                  # Authenticated administrator portal (Practical 10)
-├── students.php               # Student Management CRUD with search & CSV export (Practical 11)
+├── admin.php                  # Administrator Portal: RBAC, Status Toggle & Analytics (Practical 14)
+├── students.php               # Traditional Student CRUD with search & CSV export (Practical 11)
 ├── manage-events.php          # Admin Event CRUD with poster upload & validation (Practical 12)
 ├── events.php                 # Dynamic campus events catalog with poster rendering (Practical 12)
+├── api-students.php           # RESTful PHP JSON API endpoint (GET, POST, PUT, DELETE) (Practical 13)
+├── api/students.php           # REST alias endpoint for clean URL routing (Practical 13)
+├── ajax-students.php          # Asynchronous single-page Fetch API CRUD interface (Practical 13)
+├── test-suite.php             # Automated system diagnostic runner (10 verification checks) (Practical 15)
+├── test-report.html           # Comprehensive test audit, CO matrix & deployment report (Practical 15)
 ├── submissions.php            # Offline CSV/JSON form processing & viewer (Practical 7)
 ├── explorer.html              # Fetch API live JSON explorer (Practical 6)
 ├── index.html                 # StudentHub landing page with carousel, theme switcher & FAQs
@@ -135,7 +142,7 @@ WD/
 
 ---
 
-## 📌 Practical Summaries & Viva Questions (Practicals 1–12)
+## 📌 Practical Summaries & Viva Questions (Practicals 1–15)
 
 ### Practical 1: Project Initiation, Requirement Analysis, Sitemap & GitHub Setup
 - **Core Technology**: Requirement analysis, Sitemap architecture, Figma/Draw.io Wireframes, Git.
@@ -216,6 +223,30 @@ WD/
   1. *Why is checking `$_FILES['poster']['type']` insecure?* `$_FILES['file']['type']` is sent directly by the client browser's HTTP request header and can be forged easily. Using PHP's `finfo_file()` examines the file's actual magic bytes to determine the true MIME type.
   2. *Why do we rename uploaded files and place an `.htaccess` in the uploads folder?* Renaming prevents directory traversal attacks and overwriting existing files. The `.htaccess` file blocks execution of any `.php`, `.cgi`, or executable files in case an attacker bypasses extension checks.
 
+### Practical 13: PHP JSON API and AJAX/Fetch-Based CRUD without Page Reload
+- **Core Technology**: Asynchronous RESTful JSON API (`GET`, `POST`, `PUT`, `DELETE`), HTTP status codes (200, 201, 400, 404, 500), centralized JSON response envelopes, JavaScript Fetch API client, live debounced search (300ms), modal editing, real-time DOM updates without page refresh, and interactive live Network Inspector panel.
+- **Implementation**: Located at `api-students.php`, `api/students.php`, and `ajax-students.php`.
+- **Viva Questions**:
+  1. *How does the Fetch API handle asynchronous HTTP methods like PUT and DELETE?* Fetch accepts a configuration object `fetch(url, { method: 'PUT', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) })`. PHP reads the payload via `file_get_contents('php://input')` and parses it into an associative array with `json_decode()`.
+  2. *Why return HTTP status codes like 201, 400, and 404 instead of always returning 200?* HTTP status codes conform to the REST architectural style and standard HTTP conventions, enabling client browsers, monitoring systems, and API consumers to understand the outcome of the request at the protocol level without inspecting custom JSON payload fields.
+
+### Practical 14: Admin Dashboard with Role-Based Access Control, Dynamic Menu & Audit Log
+- **Core Technology**: Strict RBAC route protection (`requireRole('admin')`), dynamic role-aware navigation menus, live SQL aggregate counters (`COUNT(*)`), User Account Status Toggle (Active/Inactive) with CSRF protection, interactive SVG/Canvas monthly event registrations analytics chart, and real-time administrative audit trail (`audit_logs` table).
+- **Implementation**: Located at `admin.php` and `auth.php`.
+- **Viva Questions**:
+  1. *How is Role-Based Access Control (RBAC) securely verified on the server?* After successful login, the user's role is stored in `$_SESSION['role']`. The `requireRole($role)` function checks whether `$_SESSION['role'] === $role`. If unauthorized, it terminates execution immediately with `http_response_code(403)` and displays an access-denied page, preventing unauthorized execution of administrative queries.
+  2. *What is an Audit Trail and why is it essential?* An audit log tracks sensitive administrative activities (such as creating events, altering user account status, and deleting student profiles) along with the performing user's ID, action type, description, and client IP address. It provides non-repudiation, traceability, and forensic evidence for compliance.
+
+### Practical 15: Final Integration, Testing, Documentation, GitHub Submission & Local Deployment
+- **Core Technology**: Full-stack portal integration, automated diagnostic test runner (`test-suite.php`), comprehensive verification audit report (`test-report.html`), Course Outcome (CO1–CO5) achievement mapping, WCAG 2.1 AA accessibility audit, security hardening, and Apache Virtual Host configuration (`http://studenthub.local`).
+- **Implementation**: Located at `test-suite.php`, `test-report.html`, `database.sql`, and `README.md`.
+- **Viva Questions**:
+  1. *What steps are required to configure an Apache Virtual Host in XAMPP?*
+     1. Map `127.0.0.1 studenthub.local` in `C:\Windows\System32\drivers\etc\hosts`.
+     2. In `C:\xampp\apache\conf\extra\httpd-vhosts.conf`, add a `<VirtualHost *:80>` block defining `ServerName studenthub.local` and `DocumentRoot "C:/Codding Pratice/WD"`.
+     3. Restart Apache from the XAMPP Control Panel.
+  2. *What is the difference between client-side and server-side validation in full-stack architecture?* Client-side validation (HTML5 attributes and JavaScript) enhances user experience by providing immediate feedback before transmission. Server-side validation (PHP filter functions, regex, and duplicate queries) is the authoritative security boundary that protects database integrity and prevents malicious bypass.
+
 ---
 
 ## 🚀 How to Run Locally with XAMPP
@@ -224,15 +255,46 @@ WD/
 2. **Import Database Schema**:
    - Open phpMyAdmin (`http://localhost/phpmyadmin`) or MySQL terminal.
    - Run the contents of `database.sql` into database `studenthub_db`.
-   - Alternatively, navigate to `http://localhost/WD/db.php` in your browser; it will auto-detect your port (3306 or 3307) and initialize tables automatically!
-3. **Access the Application**:
-   - Landing Page: `http://localhost/WD/index.html`
-   - User Login: `http://localhost/WD/login.php`
+   - Alternatively, navigate to `http://localhost/WD/db.php` in your browser; it will auto-detect your port (3306 or 3307) and initialize all tables and seed records automatically!
+3. **Access the Application Pages**:
+   - Portal Home: `http://localhost/WD/index.html`
+   - User Sign In: `http://localhost/WD/login.php`
    - User Registration: `http://localhost/WD/register.php`
    - Student Dashboard: `http://localhost/WD/dashboard.php`
-   - Admin Portal: `http://localhost/WD/admin.php`
-   - Student CRUD: `http://localhost/WD/students.php`
+   - Admin Operations Hub: `http://localhost/WD/admin.php`
+   - Student CRUD (Standard): `http://localhost/WD/students.php`
+   - AJAX Live API CRUD: `http://localhost/WD/ajax-students.php`
    - Event Management: `http://localhost/WD/manage-events.php`
    - Public Events Catalog: `http://localhost/WD/events.php`
-   - Data Explorer: `http://localhost/WD/explorer.html`
-   - Form Submissions: `http://localhost/WD/submissions.php`
+   - Live Data Explorer: `http://localhost/WD/explorer.html`
+   - Offline Submissions: `http://localhost/WD/submissions.php`
+   - Automated Diagnostics: `http://localhost/WD/test-suite.php`
+   - Final Test & Audit Report: `http://localhost/WD/test-report.html`
+
+---
+
+## 🌐 Apache Virtual Host Deployment (Practical 15 Intermediate Extension)
+
+To access StudentHub via a custom local domain (`http://studenthub.local`):
+
+1. **Edit Hosts File** (`C:\Windows\System32\drivers\etc\hosts`):
+   ```text
+   127.0.0.1    studenthub.local
+   127.0.0.1    www.studenthub.local
+   ```
+2. **Add VirtualHost** in `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
+   ```apache
+   <VirtualHost *:80>
+       ServerAdmin admin@charusat.ac.in
+       DocumentRoot "C:/Codding Pratice/WD"
+       ServerName studenthub.local
+       ServerAlias www.studenthub.local
+       <Directory "C:/Codding Pratice/WD">
+           Options Indexes FollowSymLinks MultiViews
+           AllowOverride All
+           Require all granted
+       </Directory>
+   </VirtualHost>
+   ```
+3. Restart Apache in the XAMPP Control Panel and navigate to:
+   **`http://studenthub.local`**
